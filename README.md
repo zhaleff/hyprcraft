@@ -22,3 +22,11 @@
 </p>
 
 <h1 align="center">Packages</h1>
+
+- Hyprland
+
+<p align="center">
+  crafted with 🜁 by <strong><a href="https://github.com/zephardev">zephar</a></strong>  
+  &nbsp;&nbsp;⇌&nbsp;&nbsp;  
+  refined with 🗝️ by <strong><a href="https://github.com/ad1822">ad1822</a></strong>
+</p>
