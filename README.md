@@ -20,3 +20,5 @@
     <img src="https://img.shields.io/github/repo-size/zephardev/hyprcraft?style=for-the-badge&label=Repo%20Size&labelColor=1e1e2e&color=f5c2e7&logo=archive&logoColor=white" alt="Repo Size" />
   </a>
 </p>
+
+<h1 align="center">Packages</h1>
