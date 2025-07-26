@@ -27,12 +27,11 @@
 
 ---
 
+---
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/122856289/292407620-0cf4f2c9-9c61-4a42-96cb-1820cb15c453.png" width="24" height="24" alt="user icon" />
-  <sub>Handcrafted by</sub>  
-  <strong><a href="https://github.com/zephardev">zephar</a></strong>
-  <br/>
-  <img src="https://user-images.githubusercontent.com/122856289/292407625-64e62e80-8720-4f1f-b4b8-9f6e8ac91a44.png" width="24" height="24" alt="user icon" />
-  <sub>Fine-tuned by</sub>  
-  <strong><a href="https://github.com/ad1822">ad1822</a></strong>
+  Made with 🗝️ by  
+  <a href="https://github.com/zephardev"><img src="https://img.shields.io/badge/zephar-171717?style=flat-square&logo=github&logoColor=white" /></a>  
+  &  
+  <a href="https://github.com/ad1822"><img src="https://img.shields.io/badge/ad1822-171717?style=flat-square&logo=github&logoColor=white" /></a>
 </p>
