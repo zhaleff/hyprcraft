@@ -1,4 +1,4 @@
-# Hyprcraft
+<h1 align="center">Hyprcraft</h1>
 
 <p align="center">
   <a href="https://github.com/zephardev/hyprcraft/stargazers">
