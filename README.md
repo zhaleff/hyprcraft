@@ -25,10 +25,8 @@
 
 - Hyprland
 
----
-
 <p align="center">
-  <img src="https://img.shields.io/badge/🗝️%20zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=7f849c" />
-  <span style="margin: 0 8px; font-weight: bold; color: #cdd6f4;">and</span>
-  <img src="https://img.shields.io/badge/🌪️%20ad1822-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=7f849c" />
+  <img src="https://img.shields.io/badge/-🗝️%20zephar-1e1e2e?style=for-the-badge&labelColor=181825&color=89b4fa" />
+  <img src="https://img.shields.io/badge/-and-1e1e2e?style=for-the-badge&labelColor=181825&color=cba6f7" />
+  <img src="https://img.shields.io/badge/-🌪️%20ad1822-1e1e2e?style=for-the-badge&labelColor=181825&color=f38ba8" />
 </p>
