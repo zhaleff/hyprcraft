@@ -28,7 +28,7 @@
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/🜁_zephar_-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=7f849c" />
-  <span style="margin: 0 8px; font-weight: bold;">and</span>
-  <img src="https://img.shields.io/badge/🜂_ad1822_-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=7f849c" />
+  <img src="https://img.shields.io/badge/🗝️%20zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=7f849c" />
+  <span style="margin: 0 8px; font-weight: bold; color: #cdd6f4;">and</span>
+  <img src="https://img.shields.io/badge/🌪️%20ad1822-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=7f849c" />
 </p>
