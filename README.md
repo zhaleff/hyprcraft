@@ -26,7 +26,7 @@
 - Hyprland
 
 <p align="center">
-  <img src="https://img.shields.io/badge/-🗝️%20zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=89b4fa&logo=archlinux&logoColor=white" alt="zephar" />
-  <img src="https://img.shields.io/badge/-and-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7" alt="and" />
-  <img src="https://img.shields.io/badge/-🌪️%20ad1822-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=f38ba8&logo=codeforces&logoColor=white" alt="ad1822" />
+  <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
+  <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
+  <img src="https://img.shields.io/badge/ad1822-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=eba0ac&logo=semantic-release&logoColor=white" alt="ad1822" />
 </p>
