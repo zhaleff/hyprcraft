@@ -1,22 +1,22 @@
 # Hyprcraft
 
 <p align="center">
-  <a href="https://github.com/zephardev/hyprdots/stargazers">
-    <img src="https://img.shields.io/github/stars/zephardev/hyprdots?style=for-the-badge&color=cba6f7&labelColor=1e1e2e&logo=starship&logoColor=white" alt="Stars" />
+  <a href="https://github.com/zephardev/hyprcraft/stargazers">
+    <img src="https://img.shields.io/github/stars/zephardev/hyprcraft?style=for-the-badge&label=Stars&labelColor=1e1e2e&color=cba6f7&logo=github&logoColor=white" alt="Stars" />
   </a>
-  <a href="https://github.com/zephardev/hyprdots/network/members">
-    <img src="https://img.shields.io/github/forks/zephardev/hyprdots?style=for-the-badge&color=eba0ac&labelColor=1e1e2e&logo=git-fork&logoColor=white" alt="Forks" />
+  <a href="https://github.com/zephardev/hyprcraft/network/members">
+    <img src="https://img.shields.io/github/forks/zephardev/hyprcraft?style=for-the-badge&label=Forks&labelColor=1e1e2e&color=eba0ac&logo=git-branch&logoColor=white" alt="Forks" />
   </a>
-  <a href="https://github.com/zephardev/hyprdots/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/zephardev/hyprdots?style=for-the-badge&color=f5c2e7&labelColor=1e1e2e&logo=people&logoColor=white" alt="Contributors" />
+  <a href="https://github.com/zephardev/hyprcraft/commits">
+    <img src="https://img.shields.io/github/commit-activity/y/zephardev/hyprcraft?style=for-the-badge&label=Commits&labelColor=1e1e2e&color=f5c2e7&logo=git-commit&logoColor=white" alt="Commits" />
   </a>
-  <a href="https://github.com/zephardev/hyprdots/commits/main">
-    <img src="https://img.shields.io/github/last-commit/zephardev/hyprdots?style=for-the-badge&color=89b4fa&labelColor=1e1e2e&logo=clock&logoColor=white" alt="Last Commit" />
+  <a href="https://github.com/zephardev/hyprcraft/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/zephardev/hyprcraft?style=for-the-badge&label=Contributors&labelColor=1e1e2e&color=f9e2af&logo=users&logoColor=white" alt="Contributors" />
   </a>
-  <a href="https://github.com/zephardev/hyprdots/pulse">
-    <img src="https://img.shields.io/github/commit-activity/y/zephardev/hyprdots?style=for-the-badge&color=74c7ec&labelColor=1e1e2e&logo=git&logoColor=white" alt="Commit Activity" />
+  <a href="https://github.com/zephardev/hyprcraft/commits/master">
+    <img src="https://img.shields.io/github/last-commit/zephardev/hyprcraft?style=for-the-badge&label=Last%20Commit&labelColor=1e1e2e&color=eba0ac&logo=github&logoColor=white" alt="Last Commit" />
   </a>
-  <a href="https://github.com/zephardev/hyprdots">
-    <img src="https://img.shields.io/github/repo-size/zephardev/hyprdots?style=for-the-badge&color=f9e2af&labelColor=1e1e2e&logo=database&logoColor=white" alt="Repo Size" />
+  <a href="https://github.com/zephardev/hyprcraft">
+    <img src="https://img.shields.io/github/repo-size/zephardev/hyprcraft?style=for-the-badge&label=Repo%20Size&labelColor=1e1e2e&color=f5c2e7&logo=archive&logoColor=white" alt="Repo Size" />
   </a>
 </p>
