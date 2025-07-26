@@ -25,8 +25,14 @@
 
 - Hyprland
 
+---
+
 <p align="center">
-  crafted with 🜁 by <strong><a href="https://github.com/zephardev">zephar</a></strong>  
-  &nbsp;&nbsp;⇌&nbsp;&nbsp;  
-  refined with 🗝️ by <strong><a href="https://github.com/ad1822">ad1822</a></strong>
+  <img src="https://user-images.githubusercontent.com/122856289/292407620-0cf4f2c9-9c61-4a42-96cb-1820cb15c453.png" width="24" height="24" alt="user icon" />
+  <sub>Handcrafted by</sub>  
+  <strong><a href="https://github.com/zephardev">zephar</a></strong>
+  <br/>
+  <img src="https://user-images.githubusercontent.com/122856289/292407625-64e62e80-8720-4f1f-b4b8-9f6e8ac91a44.png" width="24" height="24" alt="user icon" />
+  <sub>Fine-tuned by</sub>  
+  <strong><a href="https://github.com/ad1822">ad1822</a></strong>
 </p>
