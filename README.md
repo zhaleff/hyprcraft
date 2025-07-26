@@ -27,11 +27,8 @@
 
 ---
 
----
-
 <p align="center">
-  Made with 🗝️ by  
-  <a href="https://github.com/zephardev"><img src="https://img.shields.io/badge/zephar-171717?style=flat-square&logo=github&logoColor=white" /></a>  
-  &  
-  <a href="https://github.com/ad1822"><img src="https://img.shields.io/badge/ad1822-171717?style=flat-square&logo=github&logoColor=white" /></a>
+  <img src="https://img.shields.io/badge/🜁_zephar_-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=7f849c" />
+  <span style="margin: 0 8px; font-weight: bold;">and</span>
+  <img src="https://img.shields.io/badge/🜂_ad1822_-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=7f849c" />
 </p>
