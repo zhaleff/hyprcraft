@@ -25,8 +25,8 @@
 
 <table align="center">
   <tr>
-    <th align="left">󰍉 Package</th>
-    <th align="left">󰈔 Description</th>
+    <th align="left">🍂 Package</th>
+    <th align="left">🌪️ Description</th>
   </tr>
   <tr>
     <td>Clipse / ClipX</td>
