@@ -21,9 +21,50 @@
   </a>
 </p>
 
-<h1 align="center">Packages</h1>
+<h2 align="center">󰏖 Packages Overview</h2>
 
-- Hyprland
+<table align="center">
+  <tr>
+    <th align="left">󰍉 Package</th>
+    <th align="left">󰈔 Description</th>
+  </tr>
+  <tr>
+    <td>Clipse / ClipX</td>
+    <td>Clipboard manager to keep track of copied content.</td>
+  </tr>
+  <tr>
+    <td>Hypridle</td>
+    <td>Idle daemon for executing commands after user inactivity.</td>
+  </tr>
+  <tr>
+    <td>Hyprland</td>
+    <td>Dynamic tiling Wayland compositor built on wlroots.</td>
+  </tr>
+  <tr>
+    <td>Hyprlock</td>
+    <td>Wayland-based screen locker for Hyprland sessions.</td>
+  </tr>
+  <tr>
+    <td>Hyprpaper</td>
+    <td>Wallpaper manager for Wayland, made to integrate with Hyprland.</td>
+  </tr>
+  <tr>
+    <td>Kitty</td>
+    <td>Fast, GPU-based terminal emulator with ligature and image support.</td>
+  </tr>
+  <tr>
+    <td>NetworkManager</td>
+    <td>Service to manage network connections on Linux systems.</td>
+  </tr>
+  <tr>
+    <td>Rofi</td>
+    <td>Window switcher, application launcher, and more.</td>
+  </tr>
+  <tr>
+    <td>Rofi (dmenu mode)</td>
+    <td>Use Rofi as a dmenu-compatible replacement for simple menus.</td>
+  </tr>
+</table>
 
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
