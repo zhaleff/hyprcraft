@@ -21,39 +21,21 @@
   </a>
 </p>
 
-<h1 align="center">󰣇 Installed Packages Overview</h1>
+<h1 align="center">Installed Packages</h1>
 
-<div style="font-family: 'JetBrainsMono Nerd Font', monospace; color: #cdd6f4; background-color: #1e1e2e; padding: 1rem; border-radius: 8px; max-width: 800px; margin: auto; line-height: 1.8;">
+<div style="background-color: #1e1e2e; color: #cdd6f4; font-family: 'JetBrainsMono Nerd Font', monospace; padding: 2rem; border-radius: 12px; max-width: 750px; margin: auto; line-height: 1.8;">
 
-  <p>󰒓 <b>Clipse / Clipx</b><br>
-  Clipboard manager for fast and efficient copy-paste handling.</p>
-
-  <p>󰌌 <b>Hypridle</b><br>
-  Idle daemon that executes commands based on user inactivity.</p>
-
-  <p>󰍁 <b>Hyprland</b><br>
-  A dynamic Wayland compositor with modern animation and tiling.</p>
-
-  <p>󰖳 <b>Hyprlock</b><br>
-  Lightweight and themeable lockscreen designed for Hyprland.</p>
-
-  <p>󰸞 <b>Hyprpaper</b><br>
-  Wallpaper utility for Hyprland supporting multi-monitor setups.</p>
-
-  <p>󰞷 <b>Kitty</b><br>
-  GPU-based terminal emulator with ligature and Unicode support.</p>
-
-  <p>󰈀 <b>NetworkManager</b><br>
-  Manages wired/wireless network connections via CLI or GUI.</p>
-
-  <p>󰘳 <b>Rofi</b><br>
-  Versatile launcher, window switcher, and SSH frontend.</p>
-
-  <p>󱞬 <b>Rofi -Dmenu</b><br>
-  Dmenu-compatible mode for minimalist application launching.</p>
+  <p>🗝️ <b>Clipse / Clipx</b> — Minimal clipboard manager with efficiency in mind.</p>
+  <p>🍂 <b>Hypridle</b> — Daemon to run actions based on inactivity timeouts.</p>
+  <p>🌪️ <b>Hyprland</b> — Dynamic Wayland compositor with animations and tiling.</p>
+  <p>🍁 <b>Hyprlock</b> — Clean lockscreen tailored for Hyprland setups.</p>
+  <p>🌊 <b>Hyprpaper</b> — Lightweight wallpaper manager with multi-monitor support.</p>
+  <p>🌴 <b>Kitty</b> — GPU-based terminal emulator, fast and feature-rich.</p>
+  <p>🦅 <b>NetworkManager</b> — Tool to manage all types of network interfaces.</p>
+  <p>🗝️ <b>Rofi</b> — Application launcher, SSH handler, and window switcher.</p>
+  <p>🗝️ <b>Rofi -Dmenu</b> — Dmenu-compatible launcher mode inside Rofi.</p>
 
 </div>
-
 
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
