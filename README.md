@@ -23,52 +23,38 @@
 
 <h1 align="center">󰣇 Installed Packages Overview</h1>
 
-<table align="center" width="100%" style="font-family: 'JetBrainsMono Nerd Font', monospace; color: #cdd6f4;">
-  <thead>
-    <tr style="background-color: #1e1e2e; color: #f5e0dc;">
-      <th align="left">󰊠 Package</th>
-      <th align="left">󰁨 Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>󰒓 Clipse / Clipx</td>
-      <td>Clipboard manager for quick copy-paste handling</td>
-    </tr>
-    <tr>
-      <td>󰌌 Hypridle</td>
-      <td>Idle daemon used to control system behavior on inactivity</td>
-    </tr>
-    <tr>
-      <td>󰍁 Hyprland</td>
-      <td>Wayland dynamic tiling window manager with modern animations</td>
-    </tr>
-    <tr>
-      <td>󰖳 Hyprlock</td>
-      <td>Simple and customizable lockscreen built for Hyprland</td>
-    </tr>
-    <tr>
-      <td>󰸞 Hyprpaper</td>
-      <td>Wallpaper daemon for Hyprland, supports per-monitor wallpapers</td>
-    </tr>
-    <tr>
-      <td>󰞷 Kitty</td>
-      <td>Fast, GPU-based terminal emulator with modern features</td>
-    </tr>
-    <tr>
-      <td>󰈀 NetworkManager</td>
-      <td>Essential tool for managing network connections</td>
-    </tr>
-    <tr>
-      <td>󰘳 Rofi</td>
-      <td>Window switcher, application launcher and dmenu replacement</td>
-    </tr>
-    <tr>
-      <td>󱞬 Rofi -Dmenu</td>
-      <td>Alternative mode of Rofi acting like the original dmenu</td>
-    </tr>
-  </tbody>
-</table>
+<div style="font-family: 'JetBrainsMono Nerd Font', monospace; color: #cdd6f4; background-color: #1e1e2e; padding: 1rem; border-radius: 8px; max-width: 800px; margin: auto; line-height: 1.8;">
+
+  <p>󰒓 <b>Clipse / Clipx</b><br>
+  Clipboard manager for fast and efficient copy-paste handling.</p>
+
+  <p>󰌌 <b>Hypridle</b><br>
+  Idle daemon that executes commands based on user inactivity.</p>
+
+  <p>󰍁 <b>Hyprland</b><br>
+  A dynamic Wayland compositor with modern animation and tiling.</p>
+
+  <p>󰖳 <b>Hyprlock</b><br>
+  Lightweight and themeable lockscreen designed for Hyprland.</p>
+
+  <p>󰸞 <b>Hyprpaper</b><br>
+  Wallpaper utility for Hyprland supporting multi-monitor setups.</p>
+
+  <p>󰞷 <b>Kitty</b><br>
+  GPU-based terminal emulator with ligature and Unicode support.</p>
+
+  <p>󰈀 <b>NetworkManager</b><br>
+  Manages wired/wireless network connections via CLI or GUI.</p>
+
+  <p>󰘳 <b>Rofi</b><br>
+  Versatile launcher, window switcher, and SSH frontend.</p>
+
+  <p>󱞬 <b>Rofi -Dmenu</b><br>
+  Dmenu-compatible mode for minimalist application launching.</p>
+
+</div>
+
+
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
