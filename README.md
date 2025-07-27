@@ -36,8 +36,9 @@
   <p>🦅 <b>NetworkManager</b> — Tool to manage all types of network interfaces.</p>
   <p>🗝️ <b>Rofi</b> — Application launcher, SSH handler, and window switcher.</p>
   <p>🗝️ <b>Rofi -Dmenu</b> — Dmenu-compatible launcher mode inside Rofi.</p>
-
 </div>
+
+---
 
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
