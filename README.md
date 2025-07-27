@@ -1,5 +1,7 @@
 <h1 align="center">Hyprcraft</h1>
 
+<h3 align="center">Awesome hyprland configurations</h3>
+
 <p align="center">
   <a href="https://github.com/zephardev/hyprcraft/stargazers">
     <img src="https://img.shields.io/github/stars/zephardev/hyprcraft?style=for-the-badge&label=Stars&labelColor=1e1e2e&color=cba6f7&logo=starship&logoColor=white" alt="Stars" />
