@@ -21,51 +21,54 @@
   </a>
 </p>
 
-<h2 align="center">🦅 Packages Overview</h2>
+<h1 align="center">󰣇 Installed Packages Overview</h1>
 
-<table align="center">
-  <tr>
-    <th align="left">🍂 Package</th>
-    <th align="left">🌪️ Description</th>
-  </tr>
-  <tr>
-    <td>Clipse / ClipX</td>
-    <td>Clipboard manager to keep track of copied content.</td>
-  </tr>
-  <tr>
-    <td>Hypridle</td>
-    <td>Idle daemon for executing commands after user inactivity.</td>
-  </tr>
-  <tr>
-    <td>Hyprland</td>
-    <td>Dynamic tiling Wayland compositor built on wlroots.</td>
-  </tr>
-  <tr>
-    <td>Hyprlock</td>
-    <td>Wayland-based screen locker for Hyprland sessions.</td>
-  </tr>
-  <tr>
-    <td>Hyprpaper</td>
-    <td>Wallpaper manager for Wayland, made to integrate with Hyprland.</td>
-  </tr>
-  <tr>
-    <td>Kitty</td>
-    <td>Fast, GPU-based terminal emulator with ligature and image support.</td>
-  </tr>
-  <tr>
-    <td>NetworkManager</td>
-    <td>Service to manage network connections on Linux systems.</td>
-  </tr>
-  <tr>
-    <td>Rofi</td>
-    <td>Window switcher, application launcher, and more.</td>
-  </tr>
-  <tr>
-    <td>Rofi (dmenu mode)</td>
-    <td>Use Rofi as a dmenu-compatible replacement for simple menus.</td>
-  </tr>
+<table align="center" width="100%" style="font-family: 'JetBrainsMono Nerd Font', monospace; color: #cdd6f4;">
+  <thead>
+    <tr style="background-color: #1e1e2e; color: #f5e0dc;">
+      <th align="left">󰊠 Package</th>
+      <th align="left">󰁨 Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>󰒓 Clipse / Clipx</td>
+      <td>Clipboard manager for quick copy-paste handling</td>
+    </tr>
+    <tr>
+      <td>󰌌 Hypridle</td>
+      <td>Idle daemon used to control system behavior on inactivity</td>
+    </tr>
+    <tr>
+      <td>󰍁 Hyprland</td>
+      <td>Wayland dynamic tiling window manager with modern animations</td>
+    </tr>
+    <tr>
+      <td>󰖳 Hyprlock</td>
+      <td>Simple and customizable lockscreen built for Hyprland</td>
+    </tr>
+    <tr>
+      <td>󰸞 Hyprpaper</td>
+      <td>Wallpaper daemon for Hyprland, supports per-monitor wallpapers</td>
+    </tr>
+    <tr>
+      <td>󰞷 Kitty</td>
+      <td>Fast, GPU-based terminal emulator with modern features</td>
+    </tr>
+    <tr>
+      <td>󰈀 NetworkManager</td>
+      <td>Essential tool for managing network connections</td>
+    </tr>
+    <tr>
+      <td>󰘳 Rofi</td>
+      <td>Window switcher, application launcher and dmenu replacement</td>
+    </tr>
+    <tr>
+      <td>󱞬 Rofi -Dmenu</td>
+      <td>Alternative mode of Rofi acting like the original dmenu</td>
+    </tr>
+  </tbody>
 </table>
-
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
