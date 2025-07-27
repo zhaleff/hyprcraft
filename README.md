@@ -1,6 +1,6 @@
 <h1 align="center">Hyprcraft</h1>
 
-<h3 align="center">Awesome hyprland configurations</h3>
+<h3 align="center">🍂 Impressive hyprland setup</h3>
 
 <p align="center">
   <a href="https://github.com/zephardev/hyprcraft/stargazers">
