@@ -83,6 +83,21 @@
   </p>
 </details>
 
+<details>
+  <summary><strong>🦅 Hyprland Core</strong></summary>
+  <p align="center">
+    <a href="https://github.com/hyprwm/Hyprland" target="_blank">
+      <img height="40" src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/hyprland.png" alt="Hyprland">
+    </a>
+    <a href="https://github.com/hyprwm/hyprpaper" target="_blank">
+      <img height="40" src="https://raw.githubusercontent.com/hyprwm/hyprpaper/main/assets/hyprpaper.png" alt="Hyprpaper">
+    </a>
+    <a href="https://github.com/hyprwm/hyprpicker" target="_blank">
+      <img height="40" src="https://raw.githubusercontent.com/hyprwm/hyprpicker/main/assets/icon.png" alt="Hyprpicker">
+    </a>
+  </p>
+</details>
+
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
