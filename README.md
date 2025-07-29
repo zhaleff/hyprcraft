@@ -22,23 +22,53 @@
     <img src="https://img.shields.io/github/repo-size/zephardev/hyprcraft?style=for-the-badge&label=Repo%20Size&labelColor=1e1e2e&color=f5c2e7&logo=appwrite&logoColor=white" alt="Repo Size" />
   </a>
 </p>
+<details>
+  <summary><b>Hypr Ecosystem</b></summary>
+  <ul>
+    <li>Hyprland</li>
+    <li>Hyprlock</li>
+    <li>Hypridle</li>
+    <li>Hyprpaper</li>
+    <li>Hyprshot</li>
+  </ul>
+</details>
 
-<h1 align="center">🗝️ Hyprcraft Packages</h1>
+<details>
+  <summary><b>Shell & Terminal</b></summary>
+  <ul>
+    <li>zsh</li>
+    <li>powerlevel10k</li>
+    <li>Kitty</li>
+    <li>Exa</li>
+    <li>Nvim</li>
+  </ul>
+</details>
 
-<div align="center" style="font-family: monospace; line-height: 1.5; max-width: 600px; margin: auto;">
+<details>
+  <summary><b>Launchers & UI</b></summary>
+  <ul>
+    <li>Rofi-Dmenu</li>
+    <li>Waybar</li>
+    <li>Dunst</li>
+  </ul>
+</details>
 
-<p>🦅 <b>Hyprland</b> — Dynamic tiling Wayland compositor</p>
-<p>🍁 <b>Hyprpaper</b> — Wallpaper manager for Hyprland</p>
-<p>🌪️ <b>Hyprshot</b> — Screenshot utility for Hyprland</p>
-<p>🌊 <b>Kitty</b> — GPU accelerated terminal emulator</p>
-<p>🌴 <b>NetworkManager</b> — Network connection manager</p>
-<p>🍂 <b>Pipewire</b> — Multimedia handling and audio/video server</p>
-<p>🦈 <b>Rofi</b> — Application launcher and dmenu replacement</p>
-<p>🕸️ <b>SWEP</b> — (Placeholder for a real package you use, remove if unused)</p>
-<p>❄️ <b>Zsh</b> — Z shell, interactive Unix shell</p>
+<details>
+  <summary><b>System</b></summary>
+  <ul>
+    <li>Arch Linux</li>
+    <li>Xwayland</li>
+    <li>NetworkManager</li>
+    <li>Pipewire</li>
+  </ul>
+</details>
 
-</div>
-
+<details>
+  <summary><b>Utilities</b></summary>
+  <ul>
+    <li>Clipse</li>
+  </ul>
+</details>
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
