@@ -28,42 +28,42 @@
 <details>
   <summary><b>Hypr Ecosystem</b></summary>
   <ul>
-    <li><b>Hyprland</b> – Compositor dinámico en Wayland.</li>
-    <li><b>Hyprlock</b> – Pantalla de bloqueo elegante.</li>
-    <li><b>Hypridle</b> – Gestión de inactividad.</li>
-    <li><b>Hyprpaper</b> – Gestor de wallpapers.</li>
-    <li><b>Hyprshot</b> – Capturas de pantalla rápidas.</li>
+    <li><b>Hyprland</b> – Dynamic Wayland compositor.</li>
+    <li><b>Hyprlock</b> – Clean and secure lockscreen.</li>
+    <li><b>Hypridle</b> – Idle management daemon.</li>
+    <li><b>Hyprpaper</b> – Lightweight wallpaper tool.</li>
+    <li><b>Hyprshot</b> – Quick screenshot utility.</li>
   </ul>
 </details>
 
 <details>
   <summary><b>Shell & Terminal</b></summary>
   <ul>
-    <li><b>zsh</b> – Shell moderno y flexible.</li>
-    <li><b>powerlevel10k</b> – Tema rápido y personalizable.</li>
-    <li><b>Kitty</b> – Terminal basado en GPU.</li>
-    <li><b>Exa</b> – Reemplazo moderno para <code>ls</code>.</li>
-    <li><b>Nvim</b> – Editor de texto potente.</li>
+    <li><b>zsh</b> – Fast and flexible shell.</li>
+    <li><b>powerlevel10k</b> – Clean and fast prompt theme.</li>
+    <li><b>Kitty</b> – GPU-based terminal emulator.</li>
+    <li><b>Exa</b> – Modern replacement for <code>ls</code>.</li>
+    <li><b>Nvim</b> – Powerful text editor.</li>
   </ul>
 </details>
 
 <details>
   <summary><b>Launchers & UI</b></summary>
   <ul>
-    <li><b>Rofi-Dmenu</b> – Lanzador minimalista.</li>
-    <li><b>Waybar</b> – Barra de estado modular.</li>
-    <li><b>Dunst</b> – Notificaciones simples.</li>
+    <li><b>Rofi-Dmenu</b> – Minimal and fast launcher.</li>
+    <li><b>Waybar</b> – Highly customizable status bar.</li>
+    <li><b>Dunst</b> – Lightweight notification daemon.</li>
   </ul>
 </details>
 
 <details>
   <summary><b>System</b></summary>
   <ul>
-    <li><b>Arch Linux</b> – Base sólida y simple.</li>
-    <li><b>Xwayland</b> – Soporte para apps X11.</li>
-    <li><b>Clipse</b> – Gestor de portapapeles.</li>
-    <li><b>Pipewire</b> – Sistema de audio moderno.</li>
-    <li><b>NetworkManager</b> – Gestión de red.</li>
+    <li><b>Arch Linux</b> – Simple and flexible OS base.</li>
+    <li><b>Xwayland</b> – X11 support under Wayland.</li>
+    <li><b>Clipse</b> – Clipboard manager daemon.</li>
+    <li><b>Pipewire</b> – Modern audio server.</li>
+    <li><b>NetworkManager</b> – Network connection handler.</li>
   </ul>
 </details>
 
