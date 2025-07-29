@@ -22,53 +22,53 @@
     <img src="https://img.shields.io/github/repo-size/zephardev/hyprcraft?style=for-the-badge&label=Repo%20Size&labelColor=1e1e2e&color=f5c2e7&logo=appwrite&logoColor=white" alt="Repo Size" />
   </a>
 </p>
+
+---
+
 <details>
   <summary><b>Hypr Ecosystem</b></summary>
   <ul>
-    <li>Hyprland</li>
-    <li>Hyprlock</li>
-    <li>Hypridle</li>
-    <li>Hyprpaper</li>
-    <li>Hyprshot</li>
+    <li><b>Hyprland</b> – Compositor dinámico en Wayland.</li>
+    <li><b>Hyprlock</b> – Pantalla de bloqueo elegante.</li>
+    <li><b>Hypridle</b> – Gestión de inactividad.</li>
+    <li><b>Hyprpaper</b> – Gestor de wallpapers.</li>
+    <li><b>Hyprshot</b> – Capturas de pantalla rápidas.</li>
   </ul>
 </details>
 
 <details>
   <summary><b>Shell & Terminal</b></summary>
   <ul>
-    <li>zsh</li>
-    <li>powerlevel10k</li>
-    <li>Kitty</li>
-    <li>Exa</li>
-    <li>Nvim</li>
+    <li><b>zsh</b> – Shell moderno y flexible.</li>
+    <li><b>powerlevel10k</b> – Tema rápido y personalizable.</li>
+    <li><b>Kitty</b> – Terminal basado en GPU.</li>
+    <li><b>Exa</b> – Reemplazo moderno para <code>ls</code>.</li>
+    <li><b>Nvim</b> – Editor de texto potente.</li>
   </ul>
 </details>
 
 <details>
   <summary><b>Launchers & UI</b></summary>
   <ul>
-    <li>Rofi-Dmenu</li>
-    <li>Waybar</li>
-    <li>Dunst</li>
+    <li><b>Rofi-Dmenu</b> – Lanzador minimalista.</li>
+    <li><b>Waybar</b> – Barra de estado modular.</li>
+    <li><b>Dunst</b> – Notificaciones simples.</li>
   </ul>
 </details>
 
 <details>
   <summary><b>System</b></summary>
   <ul>
-    <li>Arch Linux</li>
-    <li>Xwayland</li>
-    <li>NetworkManager</li>
-    <li>Pipewire</li>
+    <li><b>Arch Linux</b> – Base sólida y simple.</li>
+    <li><b>Xwayland</b> – Soporte para apps X11.</li>
+    <li><b>Clipse</b> – Gestor de portapapeles.</li>
+    <li><b>Pipewire</b> – Sistema de audio moderno.</li>
+    <li><b>NetworkManager</b> – Gestión de red.</li>
   </ul>
 </details>
 
-<details>
-  <summary><b>Utilities</b></summary>
-  <ul>
-    <li>Clipse</li>
-  </ul>
-</details>
+---
+
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
