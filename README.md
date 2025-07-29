@@ -44,43 +44,44 @@
 </details>
 
 <details>
-  <summary><b>🍂 Look & Feel</b></summary>
+<summary><b>🦅🍁🍂🌴🌊🌪️🦈🕸️🗝️❄️ Hyprcraft Stack</b></summary>
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/Gtk Themes-94e2d5?style=for-the-badge&logo=artstation&logoColor=white&labelColor=1e1e2e" alt="GTK Themes" />
-    <img src="https://img.shields.io/badge/Cursor Themes-f5c2e7?style=for-the-badge&logo=cursor&logoColor=white&labelColor=1e1e2e" alt="Cursor Themes" />
-    <img src="https://img.shields.io/badge/Fonts-74c7ec?style=for-the-badge&logo=fonticons&logoColor=white&labelColor=1e1e2e" alt="Fonts" />
-  </p>
-</details>
+<h4>🦅 Hyprland Suite</h4>
 
-<details>
-  <summary><b>🌴 Utilities</b></summary>
+• Hyprland — Dynamic Wayland compositor  
+• Hyprpaper — Wallpaper manager  
+• Hyprpicker — Color picker  
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/Notifications-89b4fa?style=for-the-badge&logo=bell&logoColor=white&labelColor=1e1e2e" alt="Notifications" />
-    <img src="https://img.shields.io/badge/Clipboard-eba0ac?style=for-the-badge&logo=clipboard&logoColor=white&labelColor=1e1e2e" alt="Clipboard" />
-    <img src="https://img.shields.io/badge/Polkit Agent-a6adc8?style=for-the-badge&logo=security&logoColor=white&labelColor=1e1e2e" alt="Polkit" />
-  </p>
-</details>
+<h4>🍁 Interface Tools</h4>
 
-<details>
-  <summary><b>🌊 Terminal & System</b></summary>
+• Waybar — Status bar  
+• Rofi — App launcher  
+• Wofi — GTK launcher (fallback)  
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/Kitty-94e2d5?style=for-the-badge&logo=terminal&logoColor=white&labelColor=1e1e2e" alt="Kitty" />
-    <img src="https://img.shields.io/badge/Fastfetch-89dceb?style=for-the-badge&logo=neofetch&logoColor=white&labelColor=1e1e2e" alt="Fastfetch" />
-    <img src="https://img.shields.io/badge/Nwg Look-74c7ec?style=for-the-badge&logo=archlinux&logoColor=white&labelColor=1e1e2e" alt="Nwg Look" />
-  </p>
-</details>
+<h4>🌴 Notifications & Docks</h4>
 
-<details>
-  <summary><b>🌪️ Extras & Others</b></summary>
+• Swaync — Notification center  
+• Nwg-dock — Dock & widgets  
+• Dunst — Lightweight notifier  
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/Pywalfox-f9e2af?style=for-the-badge&logo=firefox&logoColor=white&labelColor=1e1e2e" alt="Pywalfox" />
-    <img src="https://img.shields.io/badge/Wayland Utils-94e2d5?style=for-the-badge&logo=wayland&logoColor=white&labelColor=1e1e2e" alt="Wayland" />
-    <img src="https://img.shields.io/badge/User Scripts-cdd6f4?style=for-the-badge&logo=code&logoColor=white&labelColor=1e1e2e" alt="User Scripts" />
-  </p>
+<h4>🌊 System Services</h4>
+
+• Pipewire — Audio backend  
+• NetworkManager — Network configuration  
+• TLP — Power saving daemon  
+
+<h4>🌪️ CLI & Terminal Tools</h4>
+
+• Kitty — Terminal emulator  
+• Cmus — Music player  
+• Fastfetch — System info  
+
+<h4>🗝️ Base System</h4>
+
+• Arch Linux — Core OS  
+• Systemd — Init system  
+• Bash — Shell  
+
 </details>
 
 <details>
