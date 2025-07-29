@@ -23,81 +23,21 @@
   </a>
 </p>
 
-<details>
-  <summary><b>🦅 Hyprland Core</b></summary>
+<h1 align="center">🗝️ Hyprcraft Packages</h1>
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/Hyprland-89dceb?style=for-the-badge&logo=linux&logoColor=white&labelColor=1e1e2e" alt="Hyprland" />
-    <img src="https://img.shields.io/badge/Hyprpaper-b4befe?style=for-the-badge&logo=gnu&logoColor=white&labelColor=1e1e2e" alt="Hyprpaper" />
-    <img src="https://img.shields.io/badge/Hyprpicker-f9e2af?style=for-the-badge&logo=eyedropper&logoColor=white&labelColor=1e1e2e" alt="Hyprpicker" />
-  </p>
-</details>
+<div align="center" style="font-family: monospace; line-height: 1.5; max-width: 600px; margin: auto;">
 
-<details>
-  <summary><b>🍁 Bar & Launcher</b></summary>
+<p>🦅 <b>Hyprland</b> — Dynamic tiling Wayland compositor</p>
+<p>🍁 <b>Hyprpaper</b> — Wallpaper manager for Hyprland</p>
+<p>🌪️ <b>Hyprshot</b> — Screenshot utility for Hyprland</p>
+<p>🌊 <b>Kitty</b> — GPU accelerated terminal emulator</p>
+<p>🌴 <b>NetworkManager</b> — Network connection manager</p>
+<p>🍂 <b>Pipewire</b> — Multimedia handling and audio/video server</p>
+<p>🦈 <b>Rofi</b> — Application launcher and dmenu replacement</p>
+<p>🕸️ <b>SWEP</b> — (Placeholder for a real package you use, remove if unused)</p>
+<p>❄️ <b>Zsh</b> — Z shell, interactive Unix shell</p>
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/Waybar-cba6f7?style=for-the-badge&logo=gnome&logoColor=white&labelColor=1e1e2e" alt="Waybar" />
-    <img src="https://img.shields.io/badge/Rofi-f38ba8?style=for-the-badge&logo=rofi&logoColor=white&labelColor=1e1e2e" alt="Rofi" />
-    <img src="https://img.shields.io/badge/Wlogout-a6e3a1?style=for-the-badge&logo=power&logoColor=white&labelColor=1e1e2e" alt="Wlogout" />
-  </p>
-</details>
-
-<details>
-<summary><b>🦅🍁🍂🌴🌊🌪️🦈🕸️🗝️❄️ Hyprcraft Stack</b></summary>
-
-<h4>🦅 Hyprland Suite</h4>
-
-• Hyprland — Dynamic Wayland compositor  
-• Hyprpaper — Wallpaper manager  
-• Hyprpicker — Color picker  
-
-<h4>🍁 Interface Tools</h4>
-
-• Waybar — Status bar  
-• Rofi — App launcher  
-• Wofi — GTK launcher (fallback)  
-
-<h4>🌴 Notifications & Docks</h4>
-
-• Swaync — Notification center  
-• Nwg-dock — Dock & widgets  
-• Dunst — Lightweight notifier  
-
-<h4>🌊 System Services</h4>
-
-• Pipewire — Audio backend  
-• NetworkManager — Network configuration  
-• TLP — Power saving daemon  
-
-<h4>🌪️ CLI & Terminal Tools</h4>
-
-• Kitty — Terminal emulator  
-• Cmus — Music player  
-• Fastfetch — System info  
-
-<h4>🗝️ Base System</h4>
-
-• Arch Linux — Core OS  
-• Systemd — Init system  
-• Bash — Shell  
-
-</details>
-
-<details>
-  <summary><strong>🦅 Hyprland Core</strong></summary>
-  <p align="center">
-    <a href="https://github.com/hyprwm/Hyprland" target="_blank">
-      <img height="40" src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/hyprland.png" alt="Hyprland">
-    </a>
-    <a href="https://github.com/hyprwm/hyprpaper" target="_blank">
-      <img height="40" src="https://raw.githubusercontent.com/hyprwm/hyprpaper/main/assets/hyprpaper.png" alt="Hyprpaper">
-    </a>
-    <a href="https://github.com/hyprwm/hyprpicker" target="_blank">
-      <img height="40" src="https://raw.githubusercontent.com/hyprwm/hyprpicker/main/assets/icon.png" alt="Hyprpicker">
-    </a>
-  </p>
-</details>
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
