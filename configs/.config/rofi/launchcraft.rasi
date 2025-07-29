@@ -1,0 +1,126 @@
+@import "mocha.rasi"
+
+// Configuration for hyprcraft 
+// Github: https://github.com/zephardev/hyprcraft 
+
+configuration {
+   modi: "drun,run,filebrowser,window";
+  show-icons: true;
+  icon-theme: "Papirus"; 
+  drun-display-format: "{name}";
+  disable-history: false;
+  max-history-size: 20;
+  display-drun:         " "; // 󰀻
+  display-run:          " ";
+    display-window:     " ";
+  display-filebrowser:  " ";
+}
+
+* {
+  font: "JetBrains Mono Nerd Font 12";
+  foreground: @text;
+  background-color: transparent;
+  normal-background: rgba(30, 30, 30, 0.00);
+  alternate-normal-background: @normal-background;
+  border-color: @text;
+  background: @base;
+  spacing: 2px;
+}
+
+window {
+  height: 50%;
+  width: 50%;
+
+  margin: 4px;
+  padding: 4px;
+  spacing: 2px;
+  orientation: vertical;
+  anchor: center;
+  location: center;
+  border: 2px;
+  border-radius: 4px;
+  children: [ mainbox ];
+}
+
+// -mainbox // 
+
+mainbox {
+  enabled: true;
+  spacing: 2px;
+  width: 10%;
+  margin: 2px;
+  padding: 1px;
+  orientation: horizontal;
+  children: [ imagebox, listbow ];
+}
+
+// # imagebox //
+
+imagebox {
+  spacing: 0;
+  padding: 0.9em;
+  orientation: vertical;
+  margin: 0em 1.2em 0em 0em;
+  background-color: transparent;
+  background-image: url("~/.local/share/wallpapers/w-32.jpg", height);
+  children: [ entry, dummy, mode-switcher ]; 
+}
+
+listbow {
+  padding: 0px;
+  margin: 0em 0em 0em -1em;
+  background-color: transparent;
+  spacing: 1; 
+  border-color: transparent;
+  border: 2px;
+  border-radius: 0em;
+  children: [ listview ];
+}
+
+entry {
+  background-color: inherit;
+  border-radius: 6px;
+  padding: -2px 4px;
+  margin: 0em 3em 4.2em 0em;
+  spacing: 0px;
+}
+
+listview {
+  lines: 6;
+  column: 1;
+  padding: 4px;
+  border-color: transparent;
+  border-radius: 0px;
+  spacing: 2px;
+}
+
+mode-switcher {
+  enabled: true;
+  border-radius: 1em;
+  spacing: 2px;
+  margin: 0.5em;
+  orientation: horizontal;
+}
+
+button {
+    padding: 0.50em 0em;
+    border-radius: 2px;
+    background-color: inherit;
+    text-color:@text;
+    cursor: pointer;
+}
+button selected {
+    border-radius: 8em;
+    background-color: rgba(30, 30, 46, 0.40);
+    text-color:@foreground;
+}
+
+// textbox-prompt-colon // 
+
+element-text {
+  font: "JetBrains Mono Nerd Font 16";
+}
+
+element-icon {
+  size: 42;
+}
