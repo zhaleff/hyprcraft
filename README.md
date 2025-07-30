@@ -1,10 +1,5 @@
 <h1 align="center">Hyprcraft</h1>
 
-<div align="center" style="margin: 32px 0;">
- <img width="160" height="160" alt="hyprcraft" src="https://github.com/user-attachments/assets/edcff109-b6e4-425b-89fa-6e890f51e2ff" />
-  <img src="craft" alt="hypr" width="160" height="160" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);" />
-</div>
-
 <h3 align="center">🍂 Impressive hyprland setup</h3>
 
 <p align="center">
@@ -29,19 +24,6 @@
 </p>
 
 <h1 align="center">Installed Packages</h1>
-
-<div style="background-color: #1e1e2e; color: #cdd6f4; font-family: 'JetBrainsMono Nerd Font', monospace; padding: 2rem; border-radius: 12px; max-width: 750px; margin: auto; line-height: 1.8;">
-
-  <p>🗝️ <b>Clipse / Clipx</b> — Minimal clipboard manager with efficiency in mind.</p>
-  <p>🍂 <b>Hypridle</b> — Daemon to run actions based on inactivity timeouts.</p>
-  <p>🌪️ <b>Hyprland</b> — Dynamic Wayland compositor with animations and tiling.</p>
-  <p>🍁 <b>Hyprlock</b> — Clean lockscreen tailored for Hyprland setups.</p>
-  <p>🌊 <b>Hyprpaper</b> — Lightweight wallpaper manager with multi-monitor support.</p>
-  <p>🌴 <b>Kitty</b> — GPU-based terminal emulator, fast and feature-rich.</p>
-  <p>🦅 <b>NetworkManager</b> — Tool to manage all types of network interfaces.</p>
-  <p>🗝️ <b>Rofi</b> — Application launcher, SSH handler, and window switcher.</p>
-  <p>🗝️ <b>Rofi -Dmenu</b> — Dmenu-compatible launcher mode inside Rofi.</p>
-</div>
 
 ---
 
