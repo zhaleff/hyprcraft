@@ -2,7 +2,7 @@
 
 <div align="center" style="margin: 32px 0;">
 
-  <img src="RUTA_DE_TU_LOGO" alt="Logo del Proyecto" width="160" height="160" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);" />
+  <img src="craft" alt="hypr" width="160" height="160" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);" />
 </div>
 
 <h3 align="center">🍂 Impressive hyprland setup</h3>
