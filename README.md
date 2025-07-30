@@ -25,6 +25,30 @@
 
 <h1 align="center">Installed Packages</h1>
 
+# System 
+
+- Arch Linux
+
+
+# Hyprland Packages
+
+- Hyprland
+- Hyprpaper
+- hyprlock
+- hypridle
+
+# Launcher 
+
+- Rofi
+
+# Menus scripts
+
+- Wallpapers selector menu 
+- clipboard manager menu
+- shortcut menu
+- Wifi menu
+- bluetooth
+
 ---
 
 <p align="center">
