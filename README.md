@@ -1,7 +1,7 @@
 <h1 align="center">Hyprcraft</h1>
 
 <div align="center" style="margin: 32px 0;">
-
+   <img width="1024" height="1024" alt="hyprcraft" src="https://github.com/user-attachments/assets/edcff109-b6e4-425b-89fa-6e890f51e2ff" />
   <img src="craft" alt="hypr" width="160" height="160" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);" />
 </div>
 
