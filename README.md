@@ -35,34 +35,6 @@
         
 ```
 
-<h1 align="center">Installed Packages</h1>
-
-# System 
-
-- Arch Linux
-
-
-# Hyprland Packages
-
-- Hyprland
-- Hyprpaper
-- hyprlock
-- hypridle
-
-# Launcher 
-
-- Rofi
-
-# Menus scripts
-
-- Wallpapers selector menu 
-- clipboard manager menu
-- shortcut menu
-- Wifi menu
-- bluetooth
-
----
-
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
