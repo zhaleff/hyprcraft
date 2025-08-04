@@ -26,10 +26,40 @@ options="󰒮\n▶\n󰒭\n\n"
 choice=$(echo -e "$options" | rofi -dmenu -theme "$rofi_theme" -mesg "🎵 $title" --icon="$artUrl")
 
 case "$choice" in
-    "󰒭") playerctl -p "$player" next ;;
-    "▶") playerctl -p "$player" play ;;
-    "󰒮") playerctl -p "$player" previous ;;
-    "") playerctl -p "$player" stop ;;
+    "󰒭")
+        playerctl -p "$player" next
+        sleep 2
+        title=$(playerctl -p "$player" metadata title 2>/dev/null)
+        artist=$(playerctl -p "$player" metadata artist 2>/dev/null)
+        album=$(playerctl -p "$player" metadata album 2>/dev/null)
+        artUrl=$(playerctl -p "$player" metadata mpris:artUrl 2>/dev/null | sed 's/^file:\/\///')
+        
+        if [[ -f "$artUrl" ]]; then
+            notify-send "🎶 $title" "$artist — $album" --icon="$artUrl"
+        else
+            notify-send "🎶 $title" "$artist — $album"
+        fi
+    ;;
+    "▶")
+        playerctl -p "$player" play
+    ;;
+    "󰒮")
+        playerctl -p "$player" previous
+        sleep 2
+        title=$(playerctl -p "$player" metadata title 2>/dev/null)
+        artist=$(playerctl -p "$player" metadata artist 2>/dev/null)
+        album=$(playerctl -p "$player" metadata album 2>/dev/null)
+        artUrl=$(playerctl -p "$player" metadata mpris:artUrl 2>/dev/null | sed 's/^file:\/\///')
+        
+        if [[ -f "$artUrl" ]]; then
+            notify-send "🎶 $title" "$artist — $album" --icon="$artUrl"
+        else
+            notify-send "🎶 $title" "$artist — $album"
+        fi
+    ;;
+    "")
+        playerctl -p "$player" stop
+    ;;
     "")
         if [[ -f "$artUrl" ]]; then
             notify-send "🎶 $title" "$artist — $album" --icon="$artUrl"
