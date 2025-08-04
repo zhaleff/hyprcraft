@@ -35,6 +35,15 @@
         
 ```
 
+# Packages
+
+- Hyprlock - Lock screen 
+- Hyprland - WM desktop
+- Hypridle - Sleep
+- Waybar - Bar 
+- Rofi - Lancher for apps
+
+
 <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
