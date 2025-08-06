@@ -1,17 +1,9 @@
 #!/bin/bash
 
-preferred_player="youtube-music"
-
 player=$(playerctl -l 2>/dev/null | head -n 1)
 
-if [[ -z "$player" ]]; then
-    setsid "$preferred_player" >/dev/null 2>&1 &
-    sleep 3
-    player=$(playerctl -l 2>/dev/null | head -n 1)
-fi
-
 # Rofi theme path
-rofi_theme="$HOME/.config/rofi/musicPlayer/style.rasi"
+rofi_theme="$HOME/.config/rofi/workflow/music-p.rasi"
 
 
 title=$(playerctl -p "$player" metadata title)
@@ -19,9 +11,14 @@ artist=$(playerctl -p "$player" metadata artist)
 album=$(playerctl -p "$player" metadata album)
 artUrl=$(playerctl -p "$player" metadata mpris:artUrl | sed 's/^file:\/\///')
 
+loop=$(playerctl $player loop)
+status=$(playerctl -p "$player" status 2>/dev/null)
 info="🎵 $title — $artist [$album]"
 
-options="󰒮\n▶\n󰒭\n\n"
+play=$([[ "$status" == "Playing" ]] && echo "⏸" || echo "▶")
+repeat=$([[ "$status" == "None" ]] && echo "󰑗" || echo "󰑖")
+
+options="$repeat\n󰒮\n$play\n󰒭\n"
 
 choice=$(echo -e "$options" | rofi -dmenu -theme "$rofi_theme" -mesg "🎵 $title" --icon="$artUrl")
 
@@ -40,8 +37,19 @@ case "$choice" in
             notify-send "🎶 $title" "$artist — $album"
         fi
     ;;
-    "▶")
-        playerctl -p "$player" play
+    "$play")
+        if [[ "$status" == "Playing" ]]; then
+            playerctl -p "$player" pause
+        else
+            playerctl -p "$player" play
+        fi
+    ;;
+    "$repeat") 
+        if [[ "$loop" == "None" ]]; then
+            playerctl "$player" loop Playlist
+        else
+            playerctl "$player" loop None
+        fi
     ;;
     "󰒮")
         playerctl -p "$player" previous
@@ -56,9 +64,6 @@ case "$choice" in
         else
             notify-send "🎶 $title" "$artist — $album"
         fi
-    ;;
-    "")
-        playerctl -p "$player" stop
     ;;
     "")
         if [[ -f "$artUrl" ]]; then
