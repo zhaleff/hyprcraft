@@ -28,7 +28,6 @@
   <br>Minimalist setup, with coherent borders, Catppuccin colors, and aiming for that aesthetic everyone longs for under the rain.</br>
   <sub>Hyprcraft is just a project, an attempt to achieve that setup we've all longed for under the cozy cold of the night.</sub>
 </p>
-<p
 <h1 align="center">Hyprcraft</h1>
 
 <p align="center">
