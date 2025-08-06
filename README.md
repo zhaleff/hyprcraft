@@ -42,6 +42,8 @@
   Remember, we’re all beginners at some point, so don’t feel bad about using someone else’s setup
   — over time, you’ll learn and be able to create great things
 </p>
+
+---
  
  <p align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
