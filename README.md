@@ -21,30 +21,16 @@
   </a>
 </p>
 
-```text
- ██░ ██▓██   ██▓ ██▓███   ██▀███   ▄████▄   ██▀███   ▄▄▄        █████▒▄▄▄█████▓     OS: Arch Linux
-▓██░ ██▒▒██  ██▒▓██░  ██▒▓██ ▒ ██▒▒██▀ ▀█  ▓██ ▒ ██▒▒████▄    ▓██   ▒ ▓  ██▒ ▓▒     WM: Hyprland 
-▒██▀▀██░ ▒██ ██░▓██░ ██▓▒▓██ ░▄█ ▒▒▓█    ▄ ▓██ ░▄█ ▒▒██  ▀█▄  ▒████ ░ ▒ ▓██░ ▒░     Colors: Catppuccin Mocha 
-░▓█ ░██  ░ ▐██▓░▒██▄█▓▒ ▒▒██▀▀█▄  ▒▓▓▄ ▄██▒▒██▀▀█▄  ░██▄▄▄▄██ ░▓█▒  ░ ░ ▓██▓ ░     Zephar And Ad1822
-░▓█▒░██▓ ░ ██▒▓░▒██▒ ░  ░░██▓ ▒██▒▒ ▓███▀ ░░██▓ ▒██▒ ▓█   ▓██▒░▒█░      ▒██▒ ░    Hyprcraft 
- ▒ ░░▒░▒  ██▒▒▒ ▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ░▒ ▒  ░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░ ▒ ░      ▒ ░░             Awesome setup
- ▒ ░▒░ ░▓██ ░▒░ ░▒ ░       ░▒ ░ ▒░  ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░ ░          ░           modern and simple
- ░  ░░ ░▒ ▒ ░░  ░░         ░░   ░ ░          ░░   ░   ░   ▒    ░ ░      ░               Workflow Optimization
- ░  ░  ░░ ░                 ░     ░ ░         ░           ░  ░                                      
-        ░ ░                       ░                                            
-        
-```
-
-# Packages
-
-- Hyprlock - Lock screen 
-- Hyprland - WM desktop
-- Hypridle - Sleep
-- Waybar - Bar 
-- Rofi - Lancher for apps
-
+<h1 align="center">Hyprcraft</h1>
 
 <p align="center">
+  <b>Mocha Catppucin · Hyprland · Arch · Minimalist</b> 
+  <br>Minimalist setup, with coherent borders, Catppuccin colors, and aiming for that aesthetic everyone longs for under the rain.</br>
+  <sub>Hyprcraft is just a project, an attempt to achieve that setup we've all longed for under the cozy cold of the night.</sub>
+</p>
+
+<p
+  align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
   <img src="https://img.shields.io/badge/ad1822-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=eba0ac&logo=semantic-release&logoColor=white" alt="ad1822" />
