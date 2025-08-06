@@ -1,0 +1,431 @@
+//--- ZepharDev Nvim
+{
+  "layer": "top",
+  "position": "top",
+  "height": 25,
+  "margin-left": 5,
+  "margin-right": 5,
+  "margin-top": 5,
+  "margin-bottom": 0,
+  "spacing": 1,
+  "reload_style_on_change": true,
+
+  // Choose the order of the modules
+
+  "modules-left": [  
+    "group/custom-group",
+    "group/group-mpris",
+    "group/custom-1",
+
+  ],
+  "modules-center": [
+    "group/custom-group0",
+  ] ,
+  "modules-right": [
+    "group/custom-group2",
+    "group/group-battery",
+    "group/group-right",
+    "group/group-clock"
+  ],
+  "group/custom-group": {
+    "orientation": "horizontal",
+    "modules": [
+      "tray",
+      "hyprland/workspaces",
+      "custom/power",
+    ],
+  },
+  "group/group-mpris": {
+    "orientation": "horizontal",
+      "modules": [
+      "mpris",
+    ],
+  },
+  "group/custom-group2": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+    ],
+  },
+  "group/group-battery": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/notification",
+      "battery",  
+      "wireplumber",
+      "backlight", 
+    ],
+  },
+  "group/group-right": {
+    "orientation": "horizontal",
+    "modules": [
+      "keyboard-state",
+      // "custom/pkg-aur", AUR packs, you can activate it if you want 
+      "custom/pacman",
+      "temperature",
+      "cpu",
+    ],
+  },
+  "group/group-clock": {
+    "orientation": "horizontal",
+      "modules": [
+      "clock",
+    ],
+  },
+  "group/custom-group0": {
+    "orientation": "horizontal",
+      "modules": [
+      "hyprland/window"
+    ],
+  },
+  "group/custom-1": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/firefox",
+      "custom/whatsapp",
+      "custom/instagram",
+      "custom/github",
+      "custom/reddit",
+      "custom/spotify",
+      "custom/discord",
+    ],
+  },
+  "group/custom-speed": {
+    "orientation": "horizontal",
+    "modules": [
+      "network#speed",
+    ]
+  },
+  // Modules configuration
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "activate-only": false,
+    "all-outputs": true,
+    "format": "{name}",
+    "format-icons": {
+      "1": "*",  
+      "2": "*",   
+      "3": "*",     
+      "4": "*",    
+      "5": "*",   
+      "6": "*",     
+      "7": "*",    
+      "8": "*",     
+      "9": "*",    
+      "10": "*",
+       "urgent": "*",
+       "active": "*",
+       "default": "*",
+    },
+    "persistent_workspaces": {
+      "[]": 3
+    }
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 18,
+    "separate-outputs": true,
+  },
+
+  "river/tags": {
+    "num-tags": 7,
+    "tag-labels": ["", "", "", "", "", "", "", "", "", ""],
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5,
+    "show-passive-items": true,
+  },
+
+
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}",
+  },
+
+  "temperature": {
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "format-critical": "{temperatureC}°C {icon}",
+    "critical-threshold": 80,
+    "interval": 2,
+    "format": " {temperatureC:>2}°C",
+    "format-icons": ["0", "", ""],
+    "on-click": "hyprctl dispatcher togglespecialworkspace monitor",
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": " {usage:>2}%",
+    "on-click": "hyprctl dispatcher togglespecialworkspace monitor",
+  },
+
+  "memory": {
+    "interval": 2,
+    "format": " {:>2}%",
+  },
+
+  "disk": {
+    "interval": 15,
+    "format": "󰋊 {percentage_used:>2}%",
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon} {percent:>2}%",
+    "format-icons": [ "", "", "", "", "", "", "", "", ""],
+  },
+
+  // "network": {
+    // "interval": 3,
+    // "format-wifi": "  {bandwidthTotalBytes:>2}",
+    // "format-ethernet": "{ipaddr}/{cidr} ",
+    // "tooltip-format-wifi": " {ipaddr} ({signalStrength}%)",
+    // "tooltip-format": "{ifname} via {gwaddr} ",
+    // "format-linked": "{ifname} (No IP) ",
+    // "format-disconnected": "󰀦 Disconnected",
+    // "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  // },
+
+  "network": {
+        "interval": 3,
+        "format-wifi": "{icon} {essid}", 
+        "format-ethernet": "󰌗 {ipaddr}", 
+        "format-linked": "󰌙 {ifname} (Sin IP)", 
+        "format-disconnected": "󰖪 Disconnect", 
+        "format-alt": "󰛳 {ifname}: {ipaddr}", 
+        "tooltip-format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}", 
+        "tooltip-format-ethernet": "󰌗 {ifname} | IP: {ipaddr}/{cidr} | GW: {gwaddr}", 
+        "tooltip-format-disconnected": "󰖪 Sin conexión de red", 
+        "tooltip-format-linked": "󰌙 {ifname}: Not ip",
+        "max-length": 30, 
+        "on-click": "~/.config/rofi/wifi/script.sh", 
+        "format-icons": {
+            "wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"], 
+            "ethernet": ["󰌗"], 
+            "disconnected": ["󰖪"] 
+        }
+    },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%", //{format_source}",
+    "format-bluetooth": "{icon} {volume}% 󰂯", //{format_source}",
+    "format-bluetooth-muted": "󰖁 {icon} 󰂯", //{format_source}",
+    "format-muted": "󰖁 {volume}%",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󱡒",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""],
+    },
+    "on-click": "pavucontrol",
+  },
+
+  "wireplumber": {
+    "format": "{icon} {volume:>3}%",
+    "format-muted": "󰖁 {volume:>3}%",
+    "format-bluetooth": "{icon} {volume:>2}% 󰂯", //{format_source}",
+    "format-bluetooth-muted": "󰖁 {icon} 󰂯", //{format_source}",
+    "format-icons": ["", "", ""],
+  },
+
+  "cava": {
+    "cava_config": "~/Documents/cava/config",
+    "framerate": 30,
+    "autosens": 0,
+    "sensitivity": 7,
+    "bars": 15,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": false,
+    "waves": false,
+    "noise_reduction": 0.77,
+    "input_delay": 2,
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "actions": {
+      "on-click-right": "mode",
+    },
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "󰈉",
+    },
+  },
+
+   // Module Custom
+
+   "custom/pkg-aur": {
+    "exec": "yay -Qua | wc -l",
+    "interval": 1800,
+    "format": "󰏔 {}",
+    "tooltip": true,
+    "tooltip-format": "Packages to update"
+
+  },
+  "custom/power": {
+    "format": "{icon}",
+    "format-icons": " ", //  
+    "exec-on-event": "true",
+    "on-click": "wlogout",
+    "tooltip-format": "Power Menu",
+  },
+  "custom/pacman": {
+    "format": "  {}",
+    "interval": 3600, // every hour
+    "exec": "checkupdates | wc -l", // # of updates
+    "exec-if": "exit 0", // always run; consider advanced run conditions
+    "on-click": "foot -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+    "signal": 8,
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "󰂚  {}",
+    "format-icons": {
+      "notification": "󰂚<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+
+  "keyboard-state": {
+    "numlock": false,
+    "capslock": true,
+    "format": "{icon}",
+    "format-icons": {
+      "locked": " On",
+      "unlocked": " Off",
+    },
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["wezterm", "foot", "footclient"],
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""],
+  },
+   "backlight/slider": {
+     "min": 0,
+     "max": 100,
+     "orientation": "horizontal",
+     "device": "intel_backlight",
+   },
+   "mpris": {
+     "format": "{player_icon} {title} - {artist} ",
+     "format-paused": "{status_icon} {title} - {artist}",
+
+     "player-icons": {
+       "default": "󰝚 ",
+       "spotify": "<span foreground='#a6e3a1'>󰓇 </span>",
+       "firefox": "<span foreground='#f38ba8'>󰗃 </span>"
+     },
+     "status-icons": {
+       "paused": "<span color='#b4befe'>\u200A\u200A󰏤\u2009\u2009</span>"
+     },
+
+     "tooltip-format": "Playing: {title} - {artist}",
+     "tooltip-format-paused": "Paused: {title} - {artist}",
+     "min-length": 5,
+     "max-length": 15,
+   },
+  // Custom module configuration for waybar personalization modules.
+
+   "custom/github": {   
+     "format": "",
+     "on-click": "xdg-open https://github.com", 
+     "tooltip": false,
+   },
+    "custom/firefox": {   
+      "format": "󰈹",
+      "on-click": "librewolf",
+      "tooltip": false
+   },
+    "custom/reddit": {   
+      "format": "",
+      "on-click": "xdg-open https://reddit.com", 
+      "tooltip": false,
+   },
+    "custom/spotify": {   
+      "format": "",
+      "on-click": "spotify", 
+      "tooltip": false,
+   },
+    "custom/discord": {   
+     "format": " ",
+    "on-click": "discord",
+    "tooltip": false,
+   },
+    "custom/separator": {
+    "format": "|",
+    "tooltip": false,
+   },
+    "custom/wallpaper": {
+     "format": "",
+     "on-click": "~/.config/rofi/wallselect/script.sh",
+     "tooltip": false,
+   },
+    "custom/whatsapp": {
+     "format": "󰖣",
+     "on-click": "xdg-open https://web.whatsapp.com",
+     "tooltip": false,
+   },
+    "custom/instagram": {
+    "format": "",
+    "on-click": "xdg-open https://wwww.instagram.com",
+    "tooltip": false,
+  },
+  "network#speed": {
+    "interval": 1,
+    "format": "{ifname}%%",
+    "format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+    "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "{ipaddr}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 16,
+    "min-length": 14,
+  },
+} 

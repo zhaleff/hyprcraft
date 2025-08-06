@@ -1,0 +1,160 @@
+@import "mocha.css";
+
+* {
+    min-height: 0;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+/* Waybar */
+#waybar {
+    background-color: transparent;
+}
+
+#waybar .module {
+    color: @text;
+    padding: 0px 0px;
+    padding-left: 2px;
+    margin: -10px 5px -10px;
+    border: 2px;
+}
+
+#waybar .module:hover {
+    color: @subtext0;
+}
+
+#window#waybar {
+    color: @text;
+    background-color: @base;
+    transition-property:  background-color;
+    transition-duration: 0.5s;
+    border: 2px solid @mauve;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 2px;
+    padding: 0px 5px;
+    margin: 5px 0px;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px transparent;
+}
+
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-right: 0px;
+    color: @text;
+    animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+    min-width: 18px;
+    background: inherit;
+    color: @text;
+    border-radius: 12px;
+    margin-left: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 0px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: @base;
+    color: @text;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#tags button {
+    color: @mauve;
+    background: @base;
+    border-radius: 0px;
+    padding: 0px 0px;
+    margin: 5px 0px;
+}
+
+#tags button.occupied {
+    color: @mantle;
+}
+
+#tags button.focused {
+    color: @sky;
+}
+
+#tags button.urgent {
+    color: @red;
+}
+
+#clock {
+    font-size: 14px;
+}
+
+#custom-notification {
+    color: @text;
+}
+
+#group-launch,
+#custom-speed,
+#group-workspaces, 
+#group-mpris,
+#group-clock,
+#custom-1,
+#custom-group,
+#custom-group0,
+#group-right,
+#custom-group2,
+#group-left,
+#group-battery {
+    margin: 2px 3px;
+    border-radius: 6px;
+    background: @base;
+    border: 2px;
+}
+
+#custom-discord,
+#custom-reddit,
+#custom-instagram,
+#custom-whatsapp,
+#custom-firefox,
+#custom-spotify,
+#custom-github {
+  border: 2px;
+  font-size: 14px;
+}
+
+#network.disconnected,
+#pulseaudio.muted,
+#wireplumber.muted {
+    color: @red;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @green;
+}
+
+label:focus {
+    background-color: @base;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
