@@ -28,8 +28,15 @@
   <br>Minimalist setup, with coherent borders, Catppuccin colors, and aiming for that aesthetic everyone longs for under the rain.</br>
   <sub>Hyprcraft is just a project, an attempt to achieve that setup we've all longed for under the cozy cold of the night.</sub>
 </p>
-
 <p
+
+<h1 align="center">Packages</h1>
+
+<p align="center">
+  <b>Waybar</b>
+  <sub>A bar made especially for Wayland.</sub>
+</p>
+
   align="center">
   <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
   <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
