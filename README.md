@@ -28,13 +28,18 @@
   <br>Minimalist setup, with coherent borders, Catppuccin colors, and aiming for that aesthetic everyone longs for under the rain.</br>
   <sub>Hyprcraft is just a project, an attempt to achieve that setup we've all longed for under the cozy cold of the night.</sub>
 </p>
-<h1 align="center">Hyprcraft</h1>
+<h1 align="center">What is Hyprcraft?</h1>
 
 <p align="center">
-  We hope you enjoy our personal configurations—we've created them with everyone's comfort in mind. We all start from scratch, so don’t be afraid to grow and build your own dotfile. You’re welcome to use this as a base if you wish. We truly hope you enjoy all of this.
+  We hope you enjoy our personal configurations—we've created them with everyone's comfort in mind. We all s
+  tart from scratch, so don’t be afraid to grow and build your own   dotfile. You’re welcome to use this as a base if 
+  you wish. We truly hope you enjoy all of this.
 
-  We hope you enjoy our personal configurations — we've crafted them with everyone's comfort in mind. We all start from zero, so don’t be afraid to grow and create your own dotfile. You're more than welcome to use this as a base if you’d like. We truly hope you enjoy all of this.
-  Remember, we’re all beginners at some point, so don’t feel bad about using someone else’s setup — over time, you’ll learn and be able to create great things
+  We hope you enjoy our personal configurations — we've crafted them with everyone's comfort in min
+  d. We all start from zero, so don’t be afraid to grow and create your own dotfile. You'
+  re more than welcome to use this as a base if you’d like. We truly hope you enjoy all of this.
+  Remember, we’re all beginners at some point, so don’t feel bad about using someone else’s setup
+  — over time, you’ll learn and be able to create great things
 </p>
  
  <p align="center">
