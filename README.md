@@ -31,16 +31,10 @@
 <h1 align="center">What is Hyprcraft?</h1>
 
 <p align="center">
-  We hope you enjoy our personal configurations—we've created them with everyone's comfort in mind. We all s
-  tart from scratch, so don’t be afraid to grow and build your own   dotfile. You’re welcome to use this as a base if 
-  you wish. We truly hope you enjoy all of this.
-</p>
-<p align="center">
-  <br> We hope you enjoy our personal configurations — we've crafted them with everyone's comfort in min
-  d. We all start from zero, so don’t be afraid to grow and create your own dotfile. You'
-  re more than welcome to use this as a base if you’d like. We truly hope you enjoy all of this.
-  Remember, we’re all beginners at some point, so don’t feel bad about using someone else’s setup
-  — over time, you’ll learn and be able to create great things</br>
+  <b>Dotfiles Hyprcraft</b>
+  <br>We hope you enjoy our personal configurations — we’ve created them with everyone’s comfort in mind. We all start
+  from scratch, so don’t be afraid to grow and build your own dotfile.</br>
+  <sub></suYou are more than welcome to use this as a base if you wish. We truly hope you enjoy all of this.b>
 </p>
 
 --
