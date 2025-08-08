@@ -39,7 +39,7 @@
   <b> We hope you enjoy our personal configurations — we've crafted them with everyone's comfort in min
   d. We all start from zero, so don’t be afraid to grow and create your own dotfile. You'
   re more than welcome to use this as a base if you’d like. We truly hope you enjoy all of this.
-  <br>Remember, we’re all beginners at some point, so don’t feel bad about using someone else’s setup
+  Remember, we’re all beginners at some point, so don’t feel bad about using someone else’s setup
   — over time, you’ll learn and be able to create great things</b>
 </p>
 
