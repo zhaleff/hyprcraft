@@ -36,17 +36,11 @@
   you wish. We truly hope you enjoy all of this.
 </p>
 <p align="center">
-   We hope you enjoy our personal configurations — we've crafted them with everyone's comfort in min
+  <b> We hope you enjoy our personal configurations — we've crafted them with everyone's comfort in min
   d. We all start from zero, so don’t be afraid to grow and create your own dotfile. You'
-  re more than welcome to use this as a base if you’d like. We truly hope you enjoy all of this.
-  Remember, we’re all beginners at some point, so don’t feel bad about using someone else’s setup
-  — over time, you’ll learn and be able to create great things
+  re more than welcome to use this as a base if you’d like. We truly hope you enjoy all of this.</b>
+  <br>Remember, we’re all beginners at some point, so don’t feel bad about using someone else’s setup
+  — over time, you’ll learn and be able to create great things</br>
 </p>
 
----
- 
- <p align="center">
-  <img src="https://img.shields.io/badge/zephar-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=cba6f7&logo=sublime-text&logoColor=white" alt="zephar" />
-  <img src="https://img.shields.io/badge/by-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=94e2d5&logo=gitbook&logoColor=white" alt="by" />
-  <img src="https://img.shields.io/badge/ad1822-1e1e2e?style=for-the-badge&labelColor=1e1e2e&color=eba0ac&logo=semantic-release&logoColor=white" alt="ad1822" />
-</p>
+--
