@@ -3,7 +3,7 @@
 player=$(playerctl -l 2>/dev/null | head -n 1)
 
 # Rofi theme path
-rofi_theme="$HOME/.config/rofi/workflow/music-p.rasi"
+rofi_theme="$HOME/.config/rofi/music-player/style.rasi"
 
 
 title=$(playerctl -p "$player" metadata title)
