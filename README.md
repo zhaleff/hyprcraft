@@ -30,11 +30,11 @@
 </p>
 <h1 align="center">What is Hyprcraft?</h1>
 
-<p align="left">
+<p align="center">
   <b>Dotfiles Hyprcraft</b>
   <br>We hope you enjoy our personal configurations — we’ve created them with everyone’s comfort in mind. We all start
   from scratch, so don’t be afraid to grow and build your own dotfile.</br>
-  <sub></suYou are more than welcome to use this as a base if you wish. We truly hope you enjoy all of this<sub>
+  <sub>You are more than welcome to use this as a base if you wish. We truly hope you enjoy all of this<sub>
 </p>
 
 --
