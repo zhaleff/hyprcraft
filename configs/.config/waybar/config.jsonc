@@ -1,4 +1,4 @@
-//--- ZepharDev Nvim
+//--- Hyprcraft Nvim
 {
   "layer": "top",
   "position": "top",
@@ -10,7 +10,7 @@
   "spacing": 1,
   "reload_style_on_change": true,
 
-  // Choose the order of the modules
+  //Module orden 
 
   "modules-left": [  
     "group/custom-group",
@@ -235,7 +235,7 @@
   },
 
   "cava": {
-    "cava_config": "~/Documents/cava/config",
+    "cava_config": "~/.config/cava/config",
     "framerate": 30,
     "autosens": 0,
     "sensitivity": 7,
@@ -336,7 +336,7 @@
       "warning": 30,
       "critical": 15,
     },
-    "format": "{capacity}% {icon}",
+    "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{icon} {time}",
