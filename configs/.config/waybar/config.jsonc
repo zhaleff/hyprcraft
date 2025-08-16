@@ -377,7 +377,7 @@
    },
     "custom/firefox": {   
       "format": "󰈹",
-      "on-click": "librewolf",
+      "on-click": "firefox",
       "tooltip": false
    },
     "custom/reddit": {   
