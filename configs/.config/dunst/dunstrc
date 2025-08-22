@@ -1,0 +1,32 @@
+[global]
+    font = Poppins 10
+    frame_width = 0
+    separator_height = 0
+    padding = 8
+    horizontal_padding = 4
+    text_icon_padding = 4
+    corner_radius = 8
+    transparency = 10
+    notification_height = 0
+    max_icon_size = 32
+    offset = 10x10
+    width = 300
+    indicate_hidden = yes
+    word_wrap = yes
+
+[style_normal]
+    background = "#2a2a3a" # Mocha Surface0
+    foreground = "#cdd6f4" # Mocha Text
+    highlight = "#89b4fa" # Mocha Blue
+
+[style_critical]
+    background = "#2a2a3a" # Mocha Surface0
+    foreground = "#f38ba8" # Mocha Red
+    highlight = "#f5c2e7" # Mocha Pink
+
+[style_low]
+    background = "#2a2a3a" # Mocha Surface0
+    foreground = "#bac2de" # Mocha Subtext0
+
+[icons]
+    fallback_icon = true
