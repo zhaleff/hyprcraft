@@ -13,87 +13,93 @@
   // Choose the order of the modules
 
   "modules-left": [  
-    "group/custom-group",
-    "group/group-mpris",
-    "group/custom-1",
-    "custom/music"
-
+    "group/group-1",
+    "group/group-9",
+    "group/group-6",
   ],
   "modules-center": [
-    "group/custom-group0",
+    "group/group-5"
   ] ,
   "modules-right": [
-    "group/custom-group2",
-    "group/group-battery",
-    "group/group-right",
-    "group/group-clock"
+    "group/group-4",
+    "group/group-3",
+    "group/group-2"
   ],
-  "group/custom-group": {
+  "group/group-1": {
     "orientation": "horizontal",
     "modules": [
-      "tray",
       "hyprland/workspaces",
-      "custom/power",
     ],
   },
-  "group/group-mpris": {
-    "orientation": "horizontal",
-      "modules": [
-      "mpris",
-    ],
-  },
-  "group/custom-group2": {
+  "group/group-2": {
     "orientation": "horizontal",
     "modules": [
-      "network",
-    ],
-  },
-  "group/group-battery": {
-    "orientation": "horizontal",
-    "modules": [
-      "custom/notification",
-      "battery",  
-      "wireplumber",
-      "backlight", 
-    ],
-  },
-  "group/group-right": {
-    "orientation": "horizontal",
-    "modules": [
-      "keyboard-state",
-      // "custom/pkg-aur", AUR packs, you can activate it if you want 
-      "custom/pacman",
-      "temperature",
       "cpu",
+      "temperature",
+      "disk",
+      "memory",
     ],
   },
-  "group/group-clock": {
-    "orientation": "horizontal",
-      "modules": [
-      "clock",
-    ],
-  },
-  "group/custom-group0": {
-    "orientation": "horizontal",
-      "modules": [
-      "hyprland/window"
-    ],
-  },
-  "group/custom-1": {
+  "group/group-3": {
     "orientation": "horizontal",
     "modules": [
+      "wireplumber",
+      "backlight",
+    ],
+  },
+  "group/group-4": {
+    "orientation": "horizontal",
+    "modules": [
+      "bluetooth",
+      "battery",
+      "network",
+      "custom/power",
+      "custom/wallpaper",
+    ],
+  },
+  "group/group-5": {
+    "orientation": "horizontal",
+    "modules": [
+      "clock"
+    ],
+  },
+  "group/group-6": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/pacman",
+      "custom/pkg-aur",
+    ],
+  },
+  "group/group-8": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/discord",
+      "custom/spotify",
       "custom/firefox",
+    ],
+  },
+  "group/group-7": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/whatsapp",
       "custom/github",
       "custom/reddit",
-      "custom/spotify",
-      "custom/discord",
     ],
   },
-  "group/custom-speed": {
+  "group/group-9": {
     "orientation": "horizontal",
     "modules": [
-      "network#speed",
-    ]
+      "mpris",
+      "custom/previous",
+      "custom/pause",
+      "custom/next",
+    ],
+  },
+  "group/group-10": {
+    "orientation": "horizontal",
+    "modules": [
+      "hyprland/window"
+    ],
   },
   // Modules configuration
   "hyprland/workspaces": {
@@ -139,6 +145,7 @@
 
 
   "clock": {
+    "format": "{:%H:%M - %h %d}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}",
   },
@@ -175,6 +182,22 @@
     "format-icons": [ "", "", "", "", "", "", "", "", ""],
   },
 
+  "bluetooth": {
+    "format": "{icon}",
+    "format-icons": ["󰂯", "󰤾", "󰥀", "󰥄", "󰥈"],
+
+    "tooltip-format-off": "Bluetooth is off",
+    "tooltip-format-on": "Bluetooth is on",
+
+    "format-connected": "{icon} {num_connections}",
+    "format-connected-battery": "{icon} {device_battery_percentage}%",
+
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
+
+    "on-click": "blueman-manager"
+  },
+
   // "network": {
     // "interval": 3,
     // "format-wifi": "  {bandwidthTotalBytes:>2}",
@@ -188,11 +211,11 @@
 
   "network": {
         "interval": 3,
-        "format-wifi": "{icon} {essid}", 
+        "format-wifi": "{icon}", 
         "format-ethernet": "󰌗 {ipaddr}", 
         "format-linked": "󰌙 {ifname} (Sin IP)", 
-        "format-disconnected": "󰖪 Disconnect", 
-        "format-alt": "󰛳 {ifname}: {ipaddr}", 
+        "format-disconnected": "󰖪", 
+        "format-alt": "󰛳 {ifname}", 
         "tooltip-format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}", 
         "tooltip-format-ethernet": "󰌗 {ifname} | IP: {ipaddr}/{cidr} | GW: {gwaddr}", 
         "tooltip-format-disconnected": "󰖪 Sin conexión de red", 
@@ -271,12 +294,12 @@
     "interval": 1800,
     "format": "󰏔 {}",
     "tooltip": true,
-    "tooltip-format": "Packages to update"
+    "tooltip-format": "AUR packages"
 
   },
   "custom/power": {
     "format": "{icon}",
-    "format-icons": " ", //  
+    "format-icons": "", //  
     "exec-on-event": "true",
     "on-click": "wlogout",
     "tooltip-format": "Power Menu",
@@ -286,12 +309,12 @@
     "interval": 3600, // every hour
     "exec": "checkupdates | wc -l", // # of updates
     "exec-if": "exit 0", // always run; consider advanced run conditions
-    "on-click": "foot -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+    "on-click": "foot -e 'sudo pacman -Syu'; pkill ZepNet-SIGRTMIN+8 waybar", // update system
     "signal": 8,
   },
   "custom/notification": {
     "tooltip": false,
-    "format": "󰂚  {}",
+    "format": " 󰂚",
     "format-icons": {
       "notification": "󰂚<span foreground='red'><sup></sup></span>",
       "none": "",
@@ -333,15 +356,14 @@
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 15,
+      "critical": 15
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{icon} {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": ["", "", "", "", ""],
+    "format": "{icon}",
+    "format-full": "{icon}",
+    "format-plugged": " {capacity}% <span font='Font Awesome 5 Free'>\uf0e7</span> ",
+    "format-alt": "{icon} {capacity}%",
+    "tooltip-format": "{capacity}%, about {time} left",
+    "format-icons": ["", "", "", ""]
   },
    "backlight/slider": {
      "min": 0,
@@ -354,7 +376,7 @@
      "format-paused": "{status_icon} {title} - {artist}",
 
      "player-icons": {
-       "default": "󰝚 ",
+       "default": "<span foreground='#cba6f7'>󰝚 </span>",
        "spotify": "<span foreground='#a6e3a1'>󰓇 </span>",
        "firefox": "<span foreground='#f38ba8'>󰗃 </span>"
      },
@@ -375,12 +397,12 @@
      "tooltip": false,
    },
     "custom/firefox": {   
-      "format": "󰈹",
+      "format": "󰈹 ",
       "on-click": "librewolf",
       "tooltip": false
    },
     "custom/reddit": {   
-      "format": "",
+      "format": " ",
       "on-click": "xdg-open https://reddit.com", 
       "tooltip": false,
    },
@@ -399,7 +421,7 @@
     "tooltip": false,
    },
     "custom/wallpaper": {
-     "format": "",
+     "format": " ",
      "on-click": "~/.config/rofi/wallselect/script.sh",
      "tooltip": false,
    },
@@ -413,25 +435,54 @@
     "on-click": "xdg-open https://wwww.instagram.com",
     "tooltip": false,
   },
+    "custom/ip": {
+    "format": {},
+    "exec": "~/.config/waybar/scripts/ip.sh",
+    "tooltip": false,
+  },
+
+    "custom/weather":  {
+    "format": "󰖐",
+    "format-alt": "󰖐 {}",
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "tooltip": false,
+  },
 
   // Experimental module for music player of playerctl
   // this module; Next, Pause, Previous 
   "custom/next": {
-    "format": "󰙡",
-    "on-click": "~/.config/waybar/scripts/next.sh",
+    "format": "󰙡 ",
+    "on-click": "playerctl --player=spotify next && playerctl --player=youtube-music next",
     "tooltip": false,
   },
   "custom/pause": {
-    "format": "",
-    "on-click": "~/.config/waybar/scripts/pause.sh",
+    "format": "{icon}",
+//    "exec": "playerctl -l 2>/dev/null | head -n 1",
+    "on-click": "playerctl --player=spotify play-pause",
     "tooltip": false,
+    "format-icons": [ "", "" ],
   },
   "custom/previous": {
     "format": "󰙣",
-    "on-click": "~/.config/waybar/scripts/previuos.sh",
+    "on-click": "playerctl --player=spotify previous && playerctl --player=youtube-music previous",
     "tooltip": false,
   },
+  "custom/music": {
+    "exec": "playerctl -p $(playerctl -l | head -n 1) status",
+    "on-click": "playerctl -p $(playerctl -l | head -n 1) play-pause",
+    "on-scroll-up": "playerctl -p $(playerctl -l | head -n 1) next",
+    "on-scroll-down": "playerctl -p $(playerctl -l | head -n 1) previous",
+    "format": "{icon} {status}",
+    "tooltip": "Reproductor de Música",
+    "icon": "",
+    "max-length": 15
+  },
 
+  "custom/catppuccin-theme": {
+    "format": "󰏘",
+    "on-click": "~/.config/waybar/scripts/catppuccin.sh",
+    "tooltip": false,
+  },
 
   "network#speed": {
     "interval": 1,
