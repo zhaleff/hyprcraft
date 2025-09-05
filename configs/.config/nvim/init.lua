@@ -23,7 +23,7 @@ vim.opt.timeoutlen = 400
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.signcolumn = "yes"
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 0
 vim.opt.sidescrolloff = 8
 vim.opt.showmode = false
 vim.opt.breakindent = true
@@ -35,7 +35,7 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     if vim.fn.argv(0) == "" then
-      vim.api.nvim_echo({ { "HYPRCRAFT", "Title" } }, true, {})
+      vim.api.nvim_echo({ { "HyprCraft", "Title" } }, true, {})
     end
   end,
 })
@@ -51,6 +51,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -103,7 +104,7 @@ require("lazy").setup({
           return {
             Normal = { bg = colors.base },
             CursorLine = { bg = colors.mantle },
-            Visual = { bg = colors.mauve },
+            Visual = { bg = colors.overlay0 },
             LineNr = { fg = colors.base },
             CursorLineNr = { fg = colors.lavender, bold = true },
             StatusLine = { bg = colors.mantle },
@@ -116,7 +117,7 @@ require("lazy").setup({
       vim.cmd([[colorscheme catppuccin]])
     end,
   },
-config = function()
+  config = function()
   local telescope = require("telescope")
   local actions = require("telescope.actions")
   telescope.setup({
@@ -173,18 +174,22 @@ config = function()
           highlight_git = true,
           icons = { show = { file = true, folder = true, folder_arrow = true, git = true } },
         },
-        filters = { dotfiles = false },
+        filters = { dotfiles = true },
         git = { enable = true, ignore = false },
       })
     end,
   },
+
   {
     "neovim/nvim-lspconfig",
     config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
-      lspconfig.pyright.setup {} -- Python
-      lspconfig.ts_ls.setup {} -- TypeScript/JavaScript
-      lspconfig.clangd.setup {} -- C/C++
+      lspconfig.pyright.setup { capabilities = capabilities } -- Python
+      lspconfig.ts_ls.setup { capabilities = capabilities } -- TypeScript/JavaScript
+      lspconfig.clangd.setup { capabilities = capabilities }-- C/C++
+      lspconfig.html.setup { capabilities = capabilities } -- html
+      lspconfig.cssls.setup { capabilities = capabilities } -- CSS
     end,
   },
   {
@@ -223,7 +228,6 @@ config = function()
   },
   {
     "windwp/nvim-autopairs",
-    event = "InsertEnter",
     config = function()
       require("nvim-autopairs").setup({
         check_ts = true,
@@ -241,6 +245,33 @@ config = function()
     end,
   },
   {
+   "hrsh7th/nvim-cmp",
+    dependencies = {
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "L3MON4D3/LuaSnip", -- 🆕 snippets plugin
+    "saadparwaiz1/cmp_luasnip",
+    },
+    config = function()
+      local cmp = require("cmp")
+      cmp.setup({
+        mapping = cmp.mapping.preset.insert({
+          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<Tab>"] = cmp.mapping.select_next_item(),
+          ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+        }),
+        sources = {
+          { name = "html-snippets" },
+          { name = "nvim_lsp" },
+          { name = "buffer" },
+          { name = "path" },
+        },
+      })
+    end, 
+    },
+    {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("gitsigns").setup({
@@ -277,17 +308,16 @@ config = function()
         theme = "hyper",
         config = {
           header = {
-            "                                                                               ",
-            " ██░ ██▓██   ██▓ ██▓███   ██▀███   ▄████▄   ██▀███   ▄▄▄        █████▒▄▄▄█████▓",
-            "▓██░ ██▒▒██  ██▒▓██░  ██▒▓██ ▒ ██▒▒██▀ ▀█  ▓██ ▒ ██▒▒████▄    ▓██   ▒ ▓  ██▒ ▓▒",
-            "▒██▀▀██░ ▒██ ██░▓██░ ██▓▒▓██ ░▄█ ▒▒▓█    ▄ ▓██ ░▄█ ▒▒██  ▀█▄  ▒████ ░ ▒ ▓██░ ▒░",
-            "░▓█ ░██  ░ ▐██▓░▒██▄█▓▒ ▒▒██▀▀█▄  ▒▓▓▄ ▄██▒▒██▀▀█▄  ░██▄▄▄▄██ ░▓█▒  ░ ░ ▓██▓ ░ ",
-            "░▓█▒░██▓ ░ ██▒▓░▒██▒ ░  ░░██▓ ▒██▒▒ ▓███▀ ░░██▓ ▒██▒ ▓█   ▓██▒░▒█░      ▒██▒ ░ ",
-            " ▒ ░░▒░▒  ██▒▒▒ ▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ░▒ ▒  ░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░ ▒ ░      ▒ ░░   ",
-            " ▒ ░▒░ ░▓██ ░▒░ ░▒ ░       ░▒ ░ ▒░  ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░ ░          ░    ",
-            " ░  ░░ ░▒ ▒ ░░  ░░         ░░   ░ ░          ░░   ░   ░   ▒    ░ ░      ░      ",
-            " ░  ░  ░░ ░                 ░     ░ ░         ░           ░  ░                 ",
-            "         ░ ░                       ░                                            ",
+            "                                                                     ",
+            " . _  .    .__  .  .  __,--'                 ",
+"  (_)    ' /__\\ __,--'                       ",
+"'  .  ' . '| o|'                             ",
+"          [IIII]`--.__                       ",
+"           |  |       `--.__                 ",
+"           | :|             `--.__           ",
+"           |  |                   `--.__     ",
+"._,,.-,.__.'__`.___.,.,.-..,_.,.,.,-._..`--..",
+            "                                                                           ",
 
           },
           shortcut = {
@@ -332,3 +362,5 @@ vim.diagnostic.config({
   severity_sort = true,
   float = { border = "rounded", source = "always" },
 })
+
+
