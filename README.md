@@ -11,7 +11,7 @@
 </div>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="400" />
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/mocha.png" width="400" />
 </p>
 <!-- <p align="center">
   <a href="https://github.com/zemmsoares/awesome-rices">
