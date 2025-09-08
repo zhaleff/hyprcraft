@@ -218,7 +218,7 @@
         "format-alt": "󰛳 {ifname}", 
         "tooltip-format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}", 
         "tooltip-format-ethernet": "󰌗 {ifname} | IP: {ipaddr}/{cidr} | GW: {gwaddr}", 
-        "tooltip-format-disconnected": "󰖪 Sin conexión de red", 
+        "tooltip-format-disconnected": "󰖪 No internet connection", 
         "tooltip-format-linked": "󰌙 {ifname}: Not ip",
         "max-length": 30, 
         "on-click": "~/.config/rofi/wifi/script.sh", 
