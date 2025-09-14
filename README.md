@@ -25,9 +25,37 @@
   </a>
 </p>
 
+<h2 align="center">Packages</h2>
+
+- Hyprland - WM 
+- Arch Linux - OS
+- Waybar - Bar
+- Nvim -  Editor
+- Rofi - App Launcher
+- Cava
+- kitty - Terminal
+- Zsh - Shell
+- Clipse - Clipboard
+- Dunst - Notifications
+- fastfetch
+- Hyprpaper - Wallpaper
+- Hyprshot - Screenshots
+- Hyprlock - Lock
+
+<h2 align="center">Rofi Menus</h2>
+
+- Wallselect
+- WiFi menu
+- hyprshot menu
+- shortcut menu
+- Music Player
+- clipboard
+- animation menu
+  
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
