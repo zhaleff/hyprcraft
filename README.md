@@ -25,7 +25,7 @@
   </a>
 </p>
 
-<h2 align="center">Packages</h2>
+<h2 align="left">Packages</h2>
 
 - Hyprland - WM 
 - Arch Linux - OS
@@ -42,7 +42,7 @@
 - Hyprshot - Screenshots
 - Hyprlock - Lock
 
-<h2 align="center">Rofi Menus</h2>
+<h2 align="left">Rofi Menus</h2>
 
 - Wallselect
 - WiFi menu
@@ -55,6 +55,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
