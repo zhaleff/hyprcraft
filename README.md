@@ -26,8 +26,13 @@
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/catppuccin/grub/blob/main/src/catppuccin-mocha-grub-theme/icons/arch.png" width="64" height="64" alt="Arch Logo" />
+</p>
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
