@@ -26,20 +26,9 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/grub/main/src/catppuccin-mocha-grub-theme/icons/nixos.png" width="64" height="64" alt="NixOS" />
-  <img src="https://raw.githubusercontent.com/catppuccin/grub/main/src/catppuccin-mocha-grub-theme/icons/arch.png" width="64" height="64" alt="Arch Linux" />
-  <img src="https://raw.githubusercontent.com/catppuccin/grub/main/src/catppuccin-mocha-grub-theme/icons/artix.png" width="64" height="64" alt="Artix Linux" />
-  <img src="https://raw.githubusercontent.com/catppuccin/grub/main/src/catppuccin-mocha-grub-theme/icons/cachyos.png" width="64" height="64" alt="CachyOS" />
-</p>
-
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/grub/blob/main/src/catppuccin-mocha-grub-theme/icons/arch.png" width="64" height="64" />
-</p>
-
-<p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
