@@ -15,11 +15,12 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logo/macchiato-squircle.png>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logo/macchiato-squircle.png" width="400" />
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
