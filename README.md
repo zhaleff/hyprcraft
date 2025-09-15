@@ -16,7 +16,7 @@
 
   <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="1" width="5"/>
-  <a href="https://discord.com/server">
+  <a href="https://discord.gg/rYn9fTca">
     <picture>
       <source srcset="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/social/macchiato_discord.svg" width="64" height="64" alt="Discord Logo" media="(prefers-color-scheme: dark)"/>
       <source srcset="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/social/latte_discord.svg" width="64" height="64" alt="Discord Logo" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
