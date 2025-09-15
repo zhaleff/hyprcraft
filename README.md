@@ -28,13 +28,13 @@
 </p>
 
 <div align="center">
-  <h1>Catppuccin Mocha Colors 👻</h1>
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/macchiato_squircle.png" height="100" width="100" />
+  <h1 align="center"></h1>
 </div>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
