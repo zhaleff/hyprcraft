@@ -1,5 +1,9 @@
 <h1 align="center">HyprCraft</h1>
 
+<p lign="center">
+  <img src="https://raw.githubusercontent.com/zephardev/hyprcraft/readmedev/assets/HyprCraft.png" width="400" />
+</p>
+
 <div align="center">
 <p>
 <a href="https://github.com/zephardev/hyprcraft/stargazers"><img src="https://img.shields.io/github/stars/zephardev/hyprcraft?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=C9CBFF&labelColor=302D41" alt="stars"><a>&nbsp;&nbsp;
@@ -30,6 +34,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
