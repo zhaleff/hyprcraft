@@ -1,4 +1,4 @@
-<h1 align="center">HyprCraft</h1>
+<h1 align="center">👻 HyprCraft 👻</h1>
 
 <div align="center">
 <p>
@@ -14,6 +14,8 @@
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="400" />
 </p>
 
+
+
   <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="1" width="5"/>
   <a href="https://discord.gg/rYn9fTca">
@@ -25,13 +27,12 @@
   </a>
 </p>
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="1" width="5"/>
-  <img width="768" height="768" alt="2025-09-14-201431_hyprshot" src="https://github.com/user-attachments/assets/4957d079-f557-46ef-9a4e-e7d03a6fa7fe" />
-<img width=768" height="768" alt="2025-09-06-081856_hyprshot" src="https://github.com/user-attachments/assets/ea26bf11-fb8c-4b9e-b021-c9db2b574cc1" />
-
-</p>
+<div align="center">
+  <h1>Catppuccin Mocha Colors 👻</h1>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/macchiato_squircle.png" height="64" width="64" />
+</div>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
