@@ -28,10 +28,13 @@
 
 A workspace where you can develop the best code of your life, with configurations tailored for a visually pleasing experience. Featuring Catppuccin Mocha colors.
 
+> [!NOTE]
+> Repository in development; suggestions or issues can be discussed on Discord.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
