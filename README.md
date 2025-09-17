@@ -1,4 +1,4 @@
-<h1 align="center">HyprCraft</h1>
+<h1 align="center">HyprCraft, masterful code development environment</h1>
 
 <div align="center">
 <p>
@@ -30,6 +30,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
