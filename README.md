@@ -1,4 +1,5 @@
-<h1 align="center">HyprCraft, masterful code development environment</h1>
+<h1 align="center">HyprCraft</h1>
+<p align="center">Masterful code development environment</p>
 
 <div align="center">
 <p>
