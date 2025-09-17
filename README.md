@@ -1,6 +1,4 @@
-<h1 align="center">HyprCraft   
-, masterful code development environment
-</h1>
+<h1 align="center">HyprCraft   </h1>
 <div align="center">
 <p>
 <a href="https://github.com/zephardev/hyprcraft/stargazers"><img src="https://img.shields.io/github/stars/zephardev/hyprcraft?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=C9CBFF&labelColor=302D41" alt="stars"><a>&nbsp;&nbsp;
@@ -26,11 +24,36 @@
   </a>
 </p>
 
+# HyprCraft - Masterful code development environment
 
+A workspace where you can develop the best code of your life, with configurations tailored for a visually pleasing experience. Featuring Catppuccin Mocha colors.
+
+# Packages
+
+## core 
+
+- Hyprland
+- Arch Linux
+- Hyprlock
+- Hypridle
+- Hyprpaper
+- Wlogout
+- Waybar
+- Cava
+- Clipse
+- Rofi
+- zsh
+- kitty
+- btop
+- fastfetch
+- nvim
+- yazi
+- dunst
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
