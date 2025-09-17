@@ -1,6 +1,6 @@
-<h1 align="center">HyprCraft</h1>
-<p align="center">Masterful code development environment</p>
-
+<h1 align="center">HyprCraft 
+, masterful code development environment
+</h1>
 <div align="center">
 <p>
 <a href="https://github.com/zephardev/hyprcraft/stargazers"><img src="https://img.shields.io/github/stars/zephardev/hyprcraft?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=C9CBFF&labelColor=302D41" alt="stars"><a>&nbsp;&nbsp;
@@ -31,6 +31,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
