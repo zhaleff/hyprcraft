@@ -28,31 +28,11 @@
 
 A workspace where you can develop the best code of your life, with configurations tailored for a visually pleasing experience. Featuring Catppuccin Mocha colors.
 
-# Packages
-
-## core 
-
-- Hyprland
-- Arch Linux
-- Hyprlock
-- Hypridle
-- Hyprpaper
-- Wlogout
-- Waybar
-- Cava
-- Clipse
-- Rofi
-- zsh
-- kitty
-- btop
-- fastfetch
-- nvim
-- yazi
-- dunst
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
