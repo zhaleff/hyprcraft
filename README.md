@@ -48,23 +48,17 @@ The packages used are the following:
 - **Wallpaper**: Hyprpaper
 - **Screenshot**: Hyprshot
 - **Manage wallpaper**: Hyprpaper
-- **Logout menu**: Wlogout
-- **Audio Visualizer**: Cava
-- **System information tool**: FastFetch
-- **Clipboard**: Clipse
-- **Editor code**: Nvim
-- **Terminal**: Kitty
-- **Resource monitor**: Btop
-- **Terminal file manager**: Yazi
-- **Lock screen**: Hyprlock
-- **Idle manager**: Hypridle
-- **Wifi manager**: NetworkManager
 
-- 
+>  [!NOTE]
+>
+> The packages used are the following: In development
+
+-
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
