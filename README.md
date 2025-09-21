@@ -15,7 +15,6 @@
 </p>
 
 
-
   <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="1" width="5"/>
   <a href="https://discord.gg/rYn9fTca">
@@ -26,6 +25,32 @@
     </picture>
   </a>
 </p>
+
+# Ricing Setup – Main Packages
+
+─────────────────────────────  
+Compositor → **Hyprland**  
+Dynamic Wayland compositor  
+─────────────────────────────  
+
+Lock & Idle → **Hyprlock**, **Hypridle**  
+Screen locker and idle manager  
+─────────────────────────────  
+
+Appearance → **Hyprpaper**, **SDDM**  
+Wallpaper handler and display manager  
+─────────────────────────────  
+
+Launchers & Bars → **Rofi**, **Waybar**  
+Application launcher and status bar  
+─────────────────────────────  
+
+Visual & System → **Cava**, **Fastfetch**  
+Audio visualizer and system info  
+─────────────────────────────
+
+
+
 
 <div align="center">
   <h1 align="center"></h1>
