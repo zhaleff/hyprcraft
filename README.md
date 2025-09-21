@@ -26,19 +26,39 @@
   </a>
 </p>
 
-# Ricing Setup – Main Packages
+# ✦ Ricing Setup – Main Packages
 
-| Category        | Package    | Description                          |
-|-----------------|------------|--------------------------------------|
-| Compositor      | Hyprland   | Dynamic Wayland compositor           |
-| Lock & Idle     | Hyprlock   | Screen locker                        |
-|                 | Hypridle   | Idle manager                         |
-| Appearance      | Hyprpaper  | Wallpaper handler                    |
-| Display Manager | SDDM       | Customizable login manager           |
-| Launcher        | Rofi       | Application launcher                 |
-| Status Bar      | Waybar     | Highly configurable status bar       |
-| Visualizer      | Cava       | Audio visualizer                     |
-| System Info     | Fastfetch  | Fast system information tool         |
+╭─────────────╮  
+│ **Compositor** │  
+╰─────────────╯  
+⟶ **Hyprland** · Dynamic Wayland compositor  
+
+╭─────────────╮  
+│ **Lock & Idle** │  
+╰─────────────╯  
+⟶ **Hyprlock** · Screen locker  
+⟶ **Hypridle** · Idle manager  
+
+╭─────────────╮  
+│ **Appearance** │  
+╰─────────────╯  
+⟶ **Hyprpaper** · Wallpaper handler  
+⟶ **SDDM** · Display manager  
+
+╭─────────────╮  
+│ **Launchers & Bars** │  
+╰─────────────╯  
+⟶ **Rofi** · Application launcher  
+⟶ **Waybar** · Status bar  
+
+╭─────────────╮  
+│ **Visual & System** │  
+╰─────────────╯  
+⟶ **Cava** · Audio visualizer  
+⟶ **Fastfetch** · System info tool
+
+Este diseño usa bloques y símbolos para dar aspecto elegante, ordenado y diferente.
+
 
 
 
