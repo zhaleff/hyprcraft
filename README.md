@@ -56,11 +56,16 @@ The packages used are the following:
 - **Terminal**: Kitty
 - **Resource monitor**: Btop
 - **Terminal file manager**: Yazi
+- **Lock screen**: Hyprlock
+- **Idle manager**: Hypridle
+- **Wifi manager**: NetworkManager
 
+- 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
