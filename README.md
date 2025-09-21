@@ -37,15 +37,16 @@ A workspace where you can develop the best code of your life, with configuration
 The colors used in this repository and configurations are those of Catppuccin Mocha. The installation script will be available soon.
 The packages used are the following:
 
-Hyprland - 
-Hyprlock - 
-Hyprpaper -
+### Packages 🍂
+
+Hyprland 
+Hyprlock
+Hyprpaper 
 Hypridle
-- 
-Waybar -
-Rofi -
+
+Waybar 
+Rofi 
 Sddm
--
 
 
 <p align="center">
