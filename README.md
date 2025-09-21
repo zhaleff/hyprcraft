@@ -37,21 +37,31 @@ A workspace where you can develop the best code of your life, with configuration
 The colors used in this repository and configurations are those of Catppuccin Mocha. The installation script will be available soon.
 The packages used are the following:
 
-### Packages 🍂
-
-- Hyprland 
-- Hyprlock
-- Hyprpaper 
-- Hypridle
-
-- Waybar 
-- Rofi 
-- Sddm
+- **OS**: Arch Linux
+- **Window Manager**: Hyprland
+- **Status bar**: Waybar
+- **Shell**: Zsh
+- **Notification Manager**: Dunst
+- **Audio manager**: pipewire + wirepumbler
+- **Colors**: Catppuccin mocha
+- **App Launcher**: Rofi
+- **Wallpaper**: Hyprpaper
+- **Screenshot**: Hyprshot
+- **Manage wallpaper**: Hyprpaper
+- **Logout menu**: Wlogout
+- **Audio Visualizer**: Cava
+- **System information tool**: FastFetch
+- **Clipboard**: Clipse
+- **Editor code**: Nvim
+- **Terminal**: Kitty
+- **Resource monitor**: Btop
+- **Terminal file manager**: Yazi
 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
