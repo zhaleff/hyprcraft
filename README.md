@@ -48,16 +48,18 @@ The packages used are the following:
 - **Wallpaper**: Hyprpaper
 - **Screenshot**: Hyprshot
 - **Manage wallpaper**: Hyprpaper
+- **Logout**: Wlogout
+- **Audio Visualizer**: Cava
 
 >  [!NOTE]
 >
 > The packages used are the following: In development
 
--
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
