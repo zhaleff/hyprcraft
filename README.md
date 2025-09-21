@@ -28,26 +28,17 @@
 
 # Ricing Setup – Main Packages
 
-─────────────────────────────  
-Compositor → **Hyprland**  
-Dynamic Wayland compositor  
-─────────────────────────────  
-
-Lock & Idle → **Hyprlock**, **Hypridle**  
-Screen locker and idle manager  
-─────────────────────────────  
-
-Appearance → **Hyprpaper**, **SDDM**  
-Wallpaper handler and display manager  
-─────────────────────────────  
-
-Launchers & Bars → **Rofi**, **Waybar**  
-Application launcher and status bar  
-─────────────────────────────  
-
-Visual & System → **Cava**, **Fastfetch**  
-Audio visualizer and system info  
-─────────────────────────────
+| Category        | Package    | Description                          |
+|-----------------|------------|--------------------------------------|
+| Compositor      | Hyprland   | Dynamic Wayland compositor           |
+| Lock & Idle     | Hyprlock   | Screen locker                        |
+|                 | Hypridle   | Idle manager                         |
+| Appearance      | Hyprpaper  | Wallpaper handler                    |
+| Display Manager | SDDM       | Customizable login manager           |
+| Launcher        | Rofi       | Application launcher                 |
+| Status Bar      | Waybar     | Highly configurable status bar       |
+| Visualizer      | Cava       | Audio visualizer                     |
+| System Info     | Fastfetch  | Fast system information tool         |
 
 
 
