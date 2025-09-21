@@ -30,9 +30,9 @@ gradient_color_4 = '#89b4fa'
 gradient_color_5 = '#cba6f7'
 gradient_color_6 = '#f5c2e7'
 gradient_color_7 = '#eba0ac'
-gradient_color_8 = '#f38ba[style]
+gradient_color_8 = '#f38ba
 
-
+[style]
 bars = clasic
 bar_width = 2
 bar_spacing = 0
