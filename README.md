@@ -39,14 +39,14 @@ The packages used are the following:
 
 ### Packages 🍂
 
-Hyprland 
-Hyprlock
-Hyprpaper 
-Hypridle
+- Hyprland 
+- Hyprlock
+- Hyprpaper 
+- Hypridle
 
-Waybar 
-Rofi 
-Sddm
+- Waybar 
+- Rofi 
+- Sddm
 
 
 <p align="center">
