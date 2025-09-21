@@ -1,5 +1,4 @@
 <h1 align="center">HyprCraft   </h1>
-<h2>Masterful code development environment</h2>
 <div align="center">
 <p>
 <a href="https://github.com/zephardev/hyprcraft/stargazers"><img src="https://img.shields.io/github/stars/zephardev/hyprcraft?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=C9CBFF&labelColor=302D41" alt="stars"><a>&nbsp;&nbsp;
@@ -30,10 +29,14 @@ A workspace where you can develop the best code of your life, with configuration
 
 > [!NOTE]
 > Repository in development; suggestions or issues can be discussed on Discord.
+>
+> The colors used in this repository and configurations are those of Catppuccin Mocha. The installation script will be available soon.
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
