@@ -53,12 +53,13 @@ The packages used are the following:
 
 >  [!NOTE]
 >
-> The packages used are the following: In development
+> The packages used are the following: In development <a href="https://hyprcraft.netlify.app/">This</a>
 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
