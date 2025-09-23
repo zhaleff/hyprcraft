@@ -55,6 +55,8 @@ The packages used are the following:
 >
 > The packages used are the following: In development <a href="https://hyprcraft.netlify.app/">This</a>
 
+## Keybinds 
+
 |  Keys |  Action |
 | :------------------------------ | :---------------------------- |
 | `⎈ SUPER` + `D` | Open Terminal |
