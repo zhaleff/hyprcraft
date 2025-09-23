@@ -63,67 +63,9 @@ The packages used are the following:
 | `⎈ SUPER` + `L` | Lock Screen |
 | `⎈ SUPER` + `⇧ Shift` + `F` | Toggle Fullscreen |
 
----
 
-## Applications & Tools
-
-| Keys |   Action |
-| :------------------------------ | :---------------------------- |
-| `⎈ SUPER` + `N` | Notification Center |
-| `⎈ SUPER` + `W` | Open Browser |
-| `⎈ SUPER` + `Y` | Open Music Player |
-| `⎈ SUPER` + `I` | Music Player (Alt) |
-| `⎈ SUPER` + `E` | File Manager |
-| `⎈ SUPER` + `X` | Power Menu |
-| `⎈ SUPER` + `A` | Audio Control (Pavucontrol) |
-| `⎈ SUPER` + `C` | Open Clipboard (Alacritty) |
-| `⎈ SUPER` + `⇧ Shift` + `R` | Emoji Menu |
-| `⎈ SUPER` + `R` | Rofi Launcher |
-| `⎈ SUPER` + `G` | Gallery (Shotwell) |
-| `⎈ SUPER` + `K` | Wallpaper Menu |
-| `⎈ SUPER` + `H` | Screenshot (Hyprshot) |
-| `⎈ SUPER` + `T` | Floating Terminal |
-
----
-
-## Window Management
-
-|  Keys |  Action |
-| :------------------------------ | :---------------------------- |
-| `⎈ SUPER` + `F` | Toggle Floating |
-| `⎈ SUPER` + `P` | Toggle Pseudo Tiling |
-| `⎈ SUPER` + `J` | Toggle Split |
-| `⎈ SUPER` + `S` | Toggle Scratchpad |
-| `⎈ SUPER` + `⇧ Shift` + `S` | Send to Scratchpad |
-| `⎈ SUPER` + `←` | Focus Left |
-| `⎈ SUPER` + `→` | Focus Right |
-| `⎈ SUPER` + `↑` | Focus Up |
-| `⎈ SUPER` + `↓` | Focus Down |
-| `⎈ SUPER` + `1-0` | Switch Workspace |
-| `⎈ SUPER` + `⇧ Shift` + `1-0` | Move Window to Workspace |
-| `⎈ SUPER` + `Scroll Up` | Prev Workspace |
-| `⎈ SUPER` + `Scroll Down` | Next Workspace |
-| `⎈ SUPER` + `LMB` | Move Window |
-| `⎈ SUPER` + `RMB` | Resize Window |
-
----
-
-## ❄️ Multimedia & Brightness
-
-| Keys | Action |
-| :------------------------------ | :---------------------------- |
-| `XF86AudioRaiseVolume` | Volume Up |
-| `XF86AudioLowerVolume` | Volume Down |
-| `XF86AudioMute` | Mute Audio |
-| `XF86AudioMicMute` | Mute Mic |
-| `XF86MonBrightnessUp` | Brightness Up |
-| `XF86MonBrightnessDown` | Brightness Down |
-| `XF86AudioNext` | Next Track |
-| `XF86AudioPause` | Play/Pause |
-| `XF86AudioPlay` | Play/Pause |
-| `XF86AudioPrev` | Previous Track |
-
-
+> [!NOTE]
+> You can find the complete keybind configuration on the HyprCraft website.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
