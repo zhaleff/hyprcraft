@@ -123,9 +123,9 @@ button:hover {
 #group-3,
 #group-2,
 #group-1 {
-    margin: 2px 3px;
+    margin: 0px 3px;
     border-radius: 6px;
-    background: @mantle; /* linear-gradient(145deg, #1e1e2e 0%, #181825 100%); */
+    background: @base; /* linear-gradient(145deg, #1e1e2e 0%, #181825 100%); */
     border: 2px;
 }
 #custom-discord,
