@@ -14,12 +14,12 @@
     color: @text;
     padding: 0px 0px;
     padding-left: 2px;
-    margin: -10px 5px -10px;
+    margin: -10px 7px -10px;
     border: 2px;
 }
 
 #waybar .module:hover {
-    color: @mauve;
+    color: @subtext1;
 
 }
 
