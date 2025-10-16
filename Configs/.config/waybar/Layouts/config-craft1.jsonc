@@ -1,0 +1,113 @@
+// ==== HyprCraft Waybar - 1
+// ==== Dotfiles - https://github.com/zhaleff/hyprcraft 
+// ==== LICENCE: MIT
+// ==== Author: 
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 25,
+  "margin-left": 5,
+  "margin-right": 5,
+  "margin-top": 5,
+  "margin-bottom": 0,
+  "spacing": 15,
+  "reload_style_on_change": true,
+
+  "include": [
+    "$XDG_CONFIG_HOME/waybar/Modules/json",
+  ],
+  "modules-left": [  
+    "group/group-1",
+    "group/group-9",
+    "group/group-10",
+  ],
+  "modules-center": [
+    "group/group-5"
+  ] ,
+  "modules-right": [
+    "group/group-4",
+    "group/group-3",
+    "group/group-2"
+  ],
+  "group/group-1": {
+    "orientation": "horizontal",
+    "modules": [
+      "hyprland/workspaces",
+    ],
+  },
+  "group/group-2": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "temperature",
+      "disk",
+      "memory",
+    ],
+  },
+  "group/group-3": {
+    "orientation": "horizontal",
+    "modules": [
+      "clock",
+      "wireplumber",
+      "backlight",
+    ],
+  },
+  "group/group-4": {
+    "orientation": "horizontal",
+    "modules": [
+      "bluetooth",
+      "battery",
+      "network",
+      "custom/power",
+      "custom/wallpaper",
+    ],
+  },
+  "group/group-5": {
+    "orientation": "horizontal",
+    "modules": [
+      "hyprland/window",
+    ],
+  },
+  "group/group-6": {
+    "orientation": "horizontal",
+    "modules": [
+      "clock",
+    ],
+  },
+  "group/group-8": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/discord",
+      "custom/spotify",
+      "custom/firefox",
+    ],
+  },
+  "group/group-7": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/whatsapp",
+      "custom/github",
+      "custom/reddit",
+    ],
+  },
+  "group/group-9": {
+    "orientation": "horizontal",
+    "modules": [
+      "mpris",
+      "custom/previous",
+      "custom/pause",
+      "custom/next",
+      "cava",
+    ],
+  },
+  "group/group-10": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/catppuccin-theme",
+      "custom/keybinds",
+      "idle_inhibitor",
+      "custom/pacman",
+    ],
+  },
+}
