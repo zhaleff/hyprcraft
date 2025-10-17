@@ -14,10 +14,13 @@
     color: @text;
     padding: 0px 0px;
     margin: -10px 6px -10px;
+    padding-left: 2px;
+    margin: -10px 7px -10px;
+    border: 2px;
 }
 
 #waybar .module:hover {
-    color: @mauve;
+    color: @subtext1;
 
 }
 
@@ -117,6 +120,10 @@ button:hover {
 #group-1 {
     border-radius: 10pt;
     background: @base; /* linear-gradient(145deg, #1e1e2e 0%, #181825 100%); */
+    margin: 0px 3px;
+    border-radius: 6px;
+    background: @base; /* linear-gradient(145deg, #1e1e2e 0%, #181825 100%); */
+    border: 2px;
 }
 #custom-discord,
 #custom-reddit,
