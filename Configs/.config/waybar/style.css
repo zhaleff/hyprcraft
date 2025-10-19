@@ -63,7 +63,7 @@ button:hover {
 #workspaces button.active {
     background: @mauve;
     color: @crust;
-    border-radius:  10pt;
+    border-radius:  4.5pt;
     margin-left: 0px;
     padding-left: 8px;
     padding-right: 8px;
@@ -118,7 +118,7 @@ button:hover {
 #group-3,
 #group-2,
 #group-1 {
-    border-radius: 10pt;
+    border-radius: 4.5pt;
     background: @base; /* linear-gradient(145deg, #1e1e2e 0%, #181825 100%); */
     margin: 0px 3px;
     border-radius: 6px;
