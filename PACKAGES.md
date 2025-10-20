@@ -17,4 +17,5 @@
 - dunst
 - fastfetch
 
-# HyprCraft, take advantage of the necessary packages, for example, some of these, you can go to the full version on the hyprcraft.netlify.app page
+## HyprCraft, take advantage of the necessary packages, for example, some of these, you can go to the full version on the hyprcraft.netlify.app page
+
