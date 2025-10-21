@@ -23,7 +23,9 @@
 - **dunst**: Lightweight and customizable notification daemon.
 - **fastfetch**: Like neofetch but faster and more customizable.
 
+> [!NOTE]
+>
+> HyprCraft, take advantage of the necessary packages, for example, some of these, you can go to the full version on the hyprcraft.netlify.app page
 
-## HyprCraft, take advantage of the necessary packages, for example, some of these, you can go to the full version on the hyprcraft.netlify.app page
 
 
