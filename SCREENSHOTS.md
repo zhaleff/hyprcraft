@@ -4,3 +4,4 @@
   <img width="500" height="400" alt="2025-10-26-155123_hyprshot" src="https://github.com/user-attachments/assets/ea37371e-9455-4870-b5f6-99f0c1aa54ad" />
 
 
+</div>
