@@ -13,9 +13,7 @@
 #waybar .module {
     color: @text;
     padding: 0px 0px;
-    margin: -10px 6px -10px;
-    padding-left: 2px;
-    margin: -10px 7px -10px;
+    margin: -10px 5px -10px;
     border: 2px;
 }
 
@@ -156,7 +154,8 @@ button:hover {
 
 #battery.charging,
 #battery.plugged {
-    color: @green; /* linear-gradient(145deg, @green 0%, #1e1e2e 100%); */
+    background-color: rgba(166, 227, 161, 0.60);
+    padding: 5px 10px;
 }
 
 label:focus {
@@ -171,3 +170,4 @@ label:focus {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
