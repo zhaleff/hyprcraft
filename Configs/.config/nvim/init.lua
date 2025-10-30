@@ -1,12 +1,13 @@
--- init lua 
--- HyprCraft dotfiles 
--- Nvim hyprcraft init 
--- repository: https://github.com/zhaleff/hyprcraft 
--- author:
+-- init.lua
+-- repository: https://github.com/zhaleff/hyprcraft
+-- author: 
+-- LICENCE: MIT
 
-
+-- === LÍDERES ===
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+-- === OPCIONES GENERALES ===
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
@@ -25,22 +26,21 @@ vim.opt.timeoutlen = 400
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.signcolumn = "yes"
-vim.opt.scrolloff = 0
+vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.showmode = false
 vim.opt.breakindent = true
 vim.opt.linebreak = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.pumblend = 10
+vim.opt.winblend = 10
+vim.opt.splitkeep = "screen"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.hlsearch = false
 
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    if vim.fn.argv(0) == "" then
-      vim.api.nvim_echo({ { "HyprCraft", "Title" } }, true, {})
-    end
-  end,
-})
-
+-- === LAZY.NVIM BOOTSTRAP ===
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -50,173 +50,94 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- === PLUGINS ===
 require("lazy").setup({
+  -- === COLORES: CATPPUCCIN ===
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = false,
     priority = 1000,
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
-        background = { light = "latte", dark = "mocha" },
         transparent_background = false,
         show_end_of_buffer = false,
         term_colors = true,
-        dim_inactive = { enabled = false, shade = "dark", percentage = 0.15 },
-        no_italic = false,
-        no_bold = false,
-        no_underline = false,
+        dim_inactive = { enabled = true, percentage = 0.15 },
         styles = {
           comments = { "italic" },
-          conditionals = { "italic" },
-          loops = { "italic" },
           functions = { "bold" },
-          keywords = { "bold" },
-          strings = {},
-          variables = {},
-          numbers = {},
-          booleans = {},
-          properties = {},
-          types = {},
-          operators = {},
+          keywords = { "italic" },
+          variables = { "italic" },
         },
-        lsp_styles = {
-          virtual_text = {
-            errors = { "italic" },
-            hints = { "italic" },
-            warnings = { "italic" },
-            information = { "italic" },
-            ok = { "italic" },
-          },
-          underlines = {
-            errors = { "underline" },
-            hints = { "underline" },
-            warnings = { "underline" },
-            information = { "underline" },
-            ok = { "underline" },
-          },
-          inlay_hints = { background = true },
-        },
-        color_overrides = {},
-        custom_highlights = {},
-        default_integrations = true,
-        auto_integrations = true,
         integrations = {
-          aerial = true,
-          alpha = true,
-          barbar = false,
-          barbecue = { dim_dirname = true, bold_basename = true, dim_context = false, alt_background = false },
-          beacon = false,
-          blink_cmp = { style = "bordered" },
           cmp = true,
-          coc_nvim = false,
-          colorful_winsep = { enabled = false, color = "red" },
-          dashboard = true,
-          diffview = true,
-          dropbar = { enabled = true, color_mode = false },
-          fidget = true,
-          flash = true,
           gitsigns = true,
-          grug_far = false,
-          harpoon = false,
-          headlines = false,
-          hop = false,
-          indent_blankline = { enabled = true, scope_color = "lavender", colored_indent_levels = false },
-          leap = false,
-          lsp_trouble = true,
-          lsp_saga = false,
-          mason = true,
-          mini = { enabled = true, indentscope_color = "lavender" },
-          neogit = true,
-          neotest = false,
-          neotree = false,
-          noice = false,
-          notify = false,
-          nvim_surround = false,
           nvimtree = true,
-          octo = false,
-          overseer = false,
-          rainbow_delimiters = true,
-          render_markdown = true,
           telescope = { enabled = true },
           treesitter = true,
-          treesitter_context = true,
-          trouble = true,
-          ts_rainbow = true,
-          ts_rainbow2 = true,
-          ufo = true,
+          dashboard = true,
           which_key = true,
-          window_picker = false,
+          indent_blankline = { enabled = true, scope_color = "lavender" },
+          mini = { enabled = true },
+          native_lsp = {
+            enabled = true,
+            virtual_text = {
+              errors = { "italic" },
+              hints = { "italic" },
+              warnings = { "italic" },
+              information = { "italic" },
+            },
+            underlines = {
+              errors = { "underline" },
+              hints = { "undercurl" },
+              warnings = { "underline" },
+              information = { "underline" },
+            },
+          },
         },
       })
-      vim.cmd([[colorscheme catppuccin]])
+      vim.cmd.colorscheme("catppuccin")
     end,
   },
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = { "hrsh7th/cmp-nvim-lsp" },
-    config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      vim.lsp.config("pyright", {
-        capabilities = capabilities,
-        settings = { python = { analysis = { autoSearchPaths = true } } },
-        single_file_support = true,
-      })
-      vim.lsp.enable("pyright", { ft = { "python" } })
+  -- === LSP BASE ===
+  { "neovim/nvim-lspconfig" },
 
-      vim.lsp.config("ts_ls", { capabilities = capabilities, single_file_support = true })
-      vim.lsp.enable("ts_ls", { ft = { "typescript", "javascript" } })
-
-      vim.lsp.config("clangd", { capabilities = capabilities, single_file_support = true })
-      vim.lsp.enable("clangd", { ft = { "c", "cpp" } })
-
-      vim.lsp.config("html", { capabilities = capabilities, single_file_support = true })
-      vim.lsp.enable("html", { ft = { "html" } })
-
-      vim.lsp.config("cssls", { capabilities = capabilities, single_file_support = true })
-      vim.lsp.enable("cssls", { ft = { "css", "scss" } })
-
-      vim.lsp.config("emmet_ls", {
-        capabilities = capabilities,
-        filetypes = { "html", "css", "javascriptreact", "typescriptreact" },
-        single_file_support = true,
-      })
-      vim.lsp.enable("emmet_ls")
-    end,
-  },
+  -- === TELESCOPE ===
   {
     "nvim-telescope/telescope.nvim",
+    branch = "0.1.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
     config = function()
       local telescope = require("telescope")
-      local actions = require("telescope.actions")
       telescope.setup({
         defaults = {
+          prompt_prefix = "  ",
+          selection_caret = "  ",
           layout_strategy = "horizontal",
-          layout_config = { prompt_position = "top" },
+          layout_config = { prompt_position = "top", height = 0.9, width = 0.9 },
           sorting_strategy = "ascending",
           mappings = {
             i = {
-              ["<C-j>"] = actions.move_selection_next,
-              ["<C-k>"] = actions.move_selection_previous,
-              ["<C-n>"] = actions.cycle_history_next,
-              ["<C-p>"] = actions.cycle_history_prev,
+              ["<C-j>"] = "move_selection_next",
+              ["<C-k>"] = "move_selection_previous",
             },
           },
         },
         pickers = {
           find_files = { hidden = true },
-          live_grep = { additional_args = { "--hidden" } },
+          live_grep = { additional_args = { "--hidden", "--glob=!.git/" } },
         },
       })
-      pcall(telescope.load_extension, "fzf")
+      telescope.load_extension("fzf")
     end,
   },
+
+  -- === LUALINE (con contador de errores) ===
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -224,13 +145,25 @@ require("lazy").setup({
       require("lualine").setup({
         options = {
           theme = "catppuccin",
-          section_separators = { right = "", left = "" },
-          component_separators = { left = "", right = "" },
           globalstatus = true,
+          component_separators = { left = "", right = "" },
+          section_separators = { left = "", right = "" },
         },
         sections = {
           lualine_a = { "mode" },
-          lualine_b = { "branch", "diff", "diagnostics" },
+          lualine_b = {
+            "branch",
+            "diff",
+            {
+              "diagnostics",
+              symbols = {
+                error = " ",
+                warn = " ",
+                info = " ",
+                hint = "󰌶 ",
+              },
+            },
+          },
           lualine_c = { { "filename", path = 1 } },
           lualine_x = { "encoding", "fileformat", "filetype" },
           lualine_y = { "progress" },
@@ -239,61 +172,47 @@ require("lazy").setup({
       })
     end,
   },
+
+  -- === NVIM-TREE ===
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("nvim-tree").setup({
-        view = { width = 35, side = "left" },
+        view = { width = 35, side = "left", adaptive_size = true },
         renderer = {
           group_empty = true,
           highlight_git = true,
           icons = { show = { file = true, folder = true, folder_arrow = true, git = true } },
         },
-        filters = { dotfiles = true },
+        filters = { dotfiles = true, custom = { "^.git$" } },
         git = { enable = true, ignore = false },
+        update_focused_file = { enable = true, update_root = false },
       })
     end,
   },
+
+  -- === TREESITTER ===
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = {
-          "lua", "python", "javascript", "typescript", "c", "cpp", "go", "rust",
-          "bash", "html", "css", "json", "yaml"
+          "html", "css", "javascript", "typescript",
+          "lua", "python", "bash", "vue", "svelte",
         },
-        sync_install = false,
-        auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
-        incremental_selection = {
-          enable = true,
-          keymaps = {
-            init_selection = "gnn",
-            node_incremental = "grn",
-            scope_incremental = "grc",
-            node_decremental = "grm",
-          },
-        },
-        textobjects = {
-          select = {
-            enable = true,
-            lookahead = true,
-            keymaps = {
-              ["af"] = "@function.outer",
-              ["if"] = "@function.inner",
-              ["ac"] = "@class.outer",
-              ["ic"] = "@class.inner",
-            },
-          },
-        },
+        auto_install = true,
       })
     end,
   },
+
+  -- === AUTOPAIRS ===
   {
     "windwp/nvim-autopairs",
+    event = "InsertEnter",
     config = function()
       require("nvim-autopairs").setup({
         check_ts = true,
@@ -301,15 +220,11 @@ require("lazy").setup({
       })
     end,
   },
-  {
-    "numToStr/Comment.nvim",
-    config = function()
-      require("Comment").setup({
-        toggler = { line = "gcc", block = "gbc" },
-        opleader = { line = "gc", block = "gb" },
-      })
-    end,
-  },
+
+  -- === COMMENT ===
+  { "numToStr/Comment.nvim", config = true },
+
+  -- === CMP + LSPKIND ===
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -318,138 +233,264 @@ require("lazy").setup({
       "hrsh7th/cmp-path",
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
+      "onsails/lspkind.nvim",
     },
     config = function()
       local cmp = require("cmp")
       local luasnip = require("luasnip")
-    
+      local lspkind = require("lspkind")
+
       cmp.setup({
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
-          end,
+        snippet = { expand = function(args) luasnip.lsp_expand(args.body) end },
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-Space>"] = cmp.mapping.complete(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
-          ["<Tab>"] = cmp.mapping.select_next_item(),
-          ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+          ["<CR>"] = cmp.mapping.confirm({ select = false }),
+          ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+              luasnip.expand_or_jump()
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+              luasnip.jump(-1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
         }),
         sources = {
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-          { name = "buffer" },
-          { name = "path" },
+          { name = "nvim_lsp", priority = 1000 },
+          { name = "luasnip", priority = 750 },
+          { name = "buffer", priority = 500 },
+          { name = "path", priority = 250 },
+        },
+        formatting = {
+          format = lspkind.cmp_format({
+            mode = "symbol_text",
+            maxwidth = 50,
+            ellipsis_char = "...",
+            symbol_map = { Emmet = "Emmet" },
+          }),
         },
       })
     end,
   },
+
+  -- === BUFFERLINE ===
   {
-    "lewis6991/gitsigns.nvim",
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      require("gitsigns").setup({
-        signs = {
-          add = { text = "│" },
-          change = { text = "│" },
-          delete = { text = "_" },
-          topdelete = { text = "‾" },
-          changedelete = { text = "~" },
+      require("bufferline").setup({
+        options = {
+          diagnostics = "nvim_lsp",
+          offsets = { { filetype = "NvimTree", text = "Explorer", padding = 1 } },
+          separator_style = "thin",
+          indicator = { style = "underline" },
+          hover = { enabled = true, delay = 200, reveal = { "close" } },
         },
-        current_line_blame = true,
-        current_line_blame_opts = { delay = 300 },
       })
     end,
   },
+
+  -- === GITSIGNS ===
+  { "lewis6991/gitsigns.nvim", config = true },
+
+  -- === TROUBLE ===
+  { "folke/trouble.nvim", config = true },
+
+  -- === INDENT-BLANKLINE ===
   {
-    "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("trouble").setup({
-        modes = {
-          diagnostics = { auto_open = false },
-          lsp_definitions = { auto_open = false },
-        },
-      })
-    end,
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
   },
+
+  -- === DASHBOARD ===
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
+      local hyprcraft = [[
+_____________________                              _____________________
+`-._:  .:'   `:::  .:\           |\__/|           /::  .:'   `:::  .:.-'
+    \      :          \          |:   |          /         :       /    
+     \     ::    .     `-_______/ ::   \_______-'   .      ::   . /      
+      |  :   :: ::'  :   :: ::'  :   :: ::'      :: ::'  :   :: :|       
+      |     ;::         ;::         ;::         ;::         ;::  |       
+      |  .:'   `:::  .:'   `:::  .:'   `:::  .:'   `:::  .:'   `:|       
+      /     :           :           :           :           :    \       
+     /______::_____     ::    .     ::    .     ::   _____._::____\      
+                   `----._:: ::'  :   :: ::'  _.----'                    
+                          `--.       ;::  .--'                           
+                              `-. .:'  .-'                               
+                                 \    / :F_P:                            
+                                  \  /                                   
+                                   \/                                     
+      ]]
+
       require("dashboard").setup({
-        theme = "hyper",
+        theme = "doom",
         config = {
-          header = {
-            " ",
-            " . _ . .__ . . __,--' ",
-            " (_) ' /__\\ __,--' ",
-            "' . ' . '| o|' ",
-            " [IIII]`--.__ ",
-            " | | `--.__ ",
-            " | :| `--.__ ",
-            " | | `--.__ ",
-            "._,,.-,.__.'__`.___.,.,.-..,_.,.,.,-._..`--..",
-            " ",
+          header = vim.split(hyprcraft, "\n"),
+          center = {
+            { icon = " ", desc = "NvimTree        ", key = "e", action = "NvimTreeToggle" },
+            { icon = " ", desc = "Find Files      ", key = "f", action = "Telescope find_files" },
+            { icon = " ", desc = "Recent Files    ", key = "r", action = "Telescope oldfiles" },
+            { icon = " ", desc = "Live Grep       ", key = "g", action = "Telescope live_grep" },
+            { icon = "󰚰 ", desc = "Update Plugins  ", key = "u", action = "Lazy update" },
+            { icon = "󰩈 ", desc = "Quit            ", key = "q", action = "qa" },
           },
-          shortcut = {
-            { desc = "Update", group = "Label", key = "u", action = "Lazy update", icon = "󰊳 " },
-            { desc = "Files", group = "Label", key = "f", action = "Telescope find_files", icon = " " },
-            { desc = "Explorer", group = "Label", key = "e", action = "NvimTreeToggle", icon = "󰙎 " },
-            { desc = "Quit", group = "Label", key = "q", action = "qa", icon = "󰅚 " },
-          },
+          footer = function()
+            local stats = require("lazy").stats()
+            local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+            return { "", "HyprCraft 2025  •  " .. stats.count .. " plugins loaded in " .. ms .. "ms" }
+          end,
         },
       })
     end,
   },
+
+  -- === WHICH-KEY ===
   {
     "folke/which-key.nvim",
     config = function()
-      require("which-key").setup({
-        preset = "modern",
-      })
+      require("which-key").setup({ preset = "helix" })
     end,
   },
+
+  -- === EMMET-VIM ===
+  { "mattn/emmet-vim" },
 })
 
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
-vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Live grep" })
-vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find buffers" })
-vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Help tags" })
-vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
-vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
-vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Go to references" })
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
-vim.keymap.set("n", "<leader>xx", ":Trouble diagnostics toggle<CR>", { desc = "Toggle diagnostics" })
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
+-- === LSP: CAPABILITIES Y SERVIDORES ===
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-vim.api.nvim_create_autocmd("LspAttach", {
+local servers = {
+  lua_ls = { settings = { Lua = { diagnostics = { globals = { "vim" } } } } },
+  pyright = {},
+  tsserver = {},
+  html = {},
+  cssls = {},
+  bashls = {},
+  volar = {},
+  svelte = {},
+}
+
+
+local server_map = {
+  lua = "lua_ls",
+  python = "pyright",
+  javascript = "tsserver",
+  typescript = "tsserver",
+  javascriptreact = "tsserver",
+  typescriptreact = "tsserver",
+  html = "html",
+  css = "cssls",
+  bash = "bashls",
+  vue = "volar",
+  svelte = "svelte",
+}
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = vim.tbl_keys(server_map),
   callback = function(args)
-    local buf = args.buf
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = buf, desc = "Go to definition" })
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = buf, desc = "Hover documentation" })
-    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = buf, desc = "Rename symbol" })
-    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = buf, desc = "Code action" })
+    local server = server_map[vim.bo[args.buf].filetype]
+    if server then
+      vim.lsp.enable(server, { bufnr = args.buf })
+    end
   end,
 })
 
+-- === KEYMAPS GLOBALES ===
+local wk = require("which-key")
+
+wk.add({
+  { "<leader>e", ":NvimTreeToggle<CR>", desc = "Explorer" },
+
+  { "<leader>f", group = "Find" },
+  { "<leader>ff", ":Telescope find_files<CR>", desc = "Files" },
+  { "<leader>fg", ":Telescope live_grep<CR>", desc = "Grep" },
+  { "<leader>fb", ":Telescope buffers<CR>", desc = "Buffers" },
+  { "<leader>fo", ":Telescope oldfiles<CR>", desc = "Old Files" },
+  { "<leader>fh", ":Telescope help_tags<CR>", desc = "Help" },
+
+  { "<leader>w", ":w<CR>", desc = "Save" },
+  { "<leader>q", ":q<CR>", desc = "Quit" },
+
+  { "<leader>b", group = "Buffer" },
+  { "<leader>bd", ":bd<CR>", desc = "Delete" },
+
+  { "<leader>x", group = "Trouble" },
+  { "<leader>xd", ":Trouble diagnostics toggle<CR>", desc = "Diagnostics" },
+  { "<leader>xl", ":Trouble loclist toggle<CR>", desc = "Loclist" },
+  { "<leader>xq", ":Trouble quickfix toggle<CR>", desc = "Quickfix" },
+})
+
+-- Navegación entre buffers
+vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR><Esc>", { desc = "Clear Search" })
+
+-- === LSP: KEYMAPS POR BUFFER ===
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local buf = args.buf
+    wk.add({
+      { "gd", vim.lsp.buf.definition, desc = "Go to Definition", buffer = buf },
+      { "K", vim.lsp.buf.hover, desc = "Hover", buffer = buf },
+      { "<leader>ca", vim.lsp.buf.code_action, desc = "Code Action", buffer = buf },
+      { "<leader>rn", vim.lsp.buf.rename, desc = "Rename", buffer = buf },
+    }, { buffer = buf })
+  end,
+})
+
+-- === DIAGNÓSTICOS ===
 vim.diagnostic.config({
-  virtual_text = { prefix = "●", source = "if_many" },
+  virtual_text = { prefix = "●" },
   signs = {
     text = {
-      [vim.diagnostic.severity.ERROR] = " ",
-      [vim.diagnostic.severity.WARN] = " ",
-      [vim.diagnostic.severity.INFO] = " ",
-      [vim.diagnostic.severity.HINT] = "󰌵 ",
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.INFO] = "",
+      [vim.diagnostic.severity.HINT] = "󰌶",
     },
   },
-  update_in_insert = false,
-  severity_sort = true,
-  float = { border = "rounded", source = "always" },
+  float = { border = "rounded" },
+})
+
+-- === EMMET: EXPANSIÓN CON Ctrl+y, o , ===
+vim.g.user_emmet_install_global = 0
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "html", "javascriptreact", "typescriptreact", "vue", "svelte" },
+  command = "EmmetInstall",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "html", "javascriptreact", "typescriptreact", "vue", "svelte" },
+  callback = function()
+    vim.keymap.set("i", "<C-y>,", "<Plug>(emmet-expand-abbr)", { buffer = true })
+    vim.keymap.set("i", ",", function()
+      local line = vim.api.nvim_get_current_line()
+      local col = vim.api.nvim_win_get_cursor(0)[2]
+      if line:sub(1, col):match("[%w%-%]>$") then
+        return "<C-y>,"
+      else
+        return ","
+      end
+    end, { expr = true, buffer = true })
+  end,
 })
