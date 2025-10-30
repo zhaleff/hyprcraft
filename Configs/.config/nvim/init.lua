@@ -3,11 +3,11 @@
 -- author: 
 -- LICENCE: MIT
 
--- === LÍDERES ===
+-- === ===
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- === OPCIONES GENERALES ===
+-- === General options  ===
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
@@ -40,7 +40,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.hlsearch = false
 
--- === LAZY.NVIM BOOTSTRAP ===
+-- === Nvim Lazy ===
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -50,9 +50,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- === PLUGINS ===
+-- === Plugins ===
 require("lazy").setup({
-  -- === COLORES: CATPPUCCIN ===
+  -- === Theme: Catppuccin ===
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -101,10 +101,10 @@ require("lazy").setup({
     end,
   },
 
-  -- === LSP BASE ===
+  -- === lsp base ===
   { "neovim/nvim-lspconfig" },
 
-  -- === TELESCOPE ===
+  -- === Telescope ===
   {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
@@ -137,7 +137,7 @@ require("lazy").setup({
     end,
   },
 
-  -- === LUALINE (con contador de errores) ===
+  -- === lualine ===
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -173,7 +173,7 @@ require("lazy").setup({
     end,
   },
 
-  -- === NVIM-TREE ===
+  -- === nvim tree ===
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -192,7 +192,7 @@ require("lazy").setup({
     end,
   },
 
-  -- === TREESITTER ===
+  -- === Treesitter ===
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -209,7 +209,7 @@ require("lazy").setup({
     end,
   },
 
-  -- === AUTOPAIRS ===
+  -- === Autopairs ===
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -221,10 +221,10 @@ require("lazy").setup({
     end,
   },
 
-  -- === COMMENT ===
+  -- === Comment ===
   { "numToStr/Comment.nvim", config = true },
 
-  -- === CMP + LSPKIND ===
+  -- === cmp + luasnip ===
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -286,7 +286,7 @@ require("lazy").setup({
     end,
   },
 
-  -- === BUFFERLINE ===
+  -- === bufferline ===
   {
     "akinsho/bufferline.nvim",
     version = "*",
@@ -304,20 +304,20 @@ require("lazy").setup({
     end,
   },
 
-  -- === GITSIGNS ===
+  -- === git ===
   { "lewis6991/gitsigns.nvim", config = true },
 
-  -- === TROUBLE ===
+  -- === Trouble ===
   { "folke/trouble.nvim", config = true },
 
-  -- === INDENT-BLANKLINE ===
+  -- === indent-blankline ===
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     opts = {},
   },
 
-  -- === DASHBOARD ===
+  -- === Dashboard ===
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
@@ -336,7 +336,7 @@ _____________________                              _____________________
                    `----._:: ::'  :   :: ::'  _.----'                    
                           `--.       ;::  .--'                           
                               `-. .:'  .-'                               
-                                 \    / :F_P:                            
+                                 \    / :HyprCraft:                            
                                   \  /                                   
                                    \/                                     
       ]]
@@ -363,7 +363,7 @@ _____________________                              _____________________
     end,
   },
 
-  -- === WHICH-KEY ===
+  -- === Which key ===
   {
     "folke/which-key.nvim",
     config = function()
@@ -371,11 +371,10 @@ _____________________                              _____________________
     end,
   },
 
-  -- === EMMET-VIM ===
+  -- === emmet-nvim ===
   { "mattn/emmet-vim" },
 })
 
--- === LSP: CAPABILITIES Y SERVIDORES ===
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local servers = {
@@ -457,7 +456,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
--- === DIAGNÓSTICOS ===
+-- === diagnosis  ===
 vim.diagnostic.config({
   virtual_text = { prefix = "●" },
   signs = {
@@ -471,7 +470,6 @@ vim.diagnostic.config({
   float = { border = "rounded" },
 })
 
--- === EMMET: EXPANSIÓN CON Ctrl+y, o , ===
 vim.g.user_emmet_install_global = 0
 
 vim.api.nvim_create_autocmd("FileType", {
