@@ -1,4 +1,4 @@
-<h1 align="center">HyprCraft   </h1><img width="50" height="50" alt="hyprcraft" src="https://github.com/user-attachments/assets/567d49fc-f37f-4bc9-a5f0-32e467f1b893" />
+<h1 align="center">HyprCraft   </h1><div aling="center"><img width="65" height="65" alt="hyprcraft" src="https://github.com/user-attachments/assets/567d49fc-f37f-4bc9-a5f0-32e467f1b893" /> </div>
 
 <div align="center">
 <p>
@@ -73,6 +73,7 @@ The packages used are the following:
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
