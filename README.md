@@ -1,5 +1,4 @@
-<h1 align="center">HyprCraft   </h1><div aling="center"><img width="65" height="65" alt="hyprcraft" src="https://github.com/user-attachments/assets/567d49fc-f37f-4bc9-a5f0-32e467f1b893" /> </div>
-
+<h1 align="center">HyprCraft </h1>
 <div align="center">
 <p>
 <a href="https://github.com/zephardev/hyprcraft/stargazers"><img src="https://img.shields.io/github/stars/zephardev/hyprcraft?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=C9CBFF&labelColor=302D41" alt="stars"><a>&nbsp;&nbsp;
@@ -73,6 +72,7 @@ The packages used are the following:
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
