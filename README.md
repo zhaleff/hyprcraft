@@ -22,6 +22,7 @@
       <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/social/latte_discord.svg" width="64" height="64" alt="Discord Logo"/>
     </picture>
   </a>
+  <img width="70" height="70" alt="hyprcraft" src="https://github.com/user-attachments/assets/567d49fc-f37f-4bc9-a5f0-32e467f1b893" />
 </p>
 
 # HyprCraft - Masterful code development environment
@@ -73,6 +74,7 @@ The packages used are the following:
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
+
 
 
 
