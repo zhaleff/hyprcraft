@@ -1,6 +1,6 @@
 -- init.lua
 -- repository: https://github.com/zhaleff/hyprcraft
--- author: 
+-- author:
 -- LICENCE: MIT
 
 -- === LÍDERES ===
@@ -26,7 +26,7 @@ vim.opt.timeoutlen = 400
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.signcolumn = "yes"
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 0
 vim.opt.sidescrolloff = 8
 vim.opt.showmode = false
 vim.opt.breakindent = true
@@ -58,6 +58,19 @@ require("lazy").setup({
     name = "catppuccin",
     priority = 1000,
     config = function()
+      local ctp_feline = require('catppuccin.special.feline')
+      ctp_feline.setup()
+      require("feline").setup({
+        components = ctp_feline.get_statusline(),
+      })
+
+      ctp_feline.setup({
+          view = {
+              lsp = {
+                  name = true
+              }
+          }
+      })
       require("catppuccin").setup({
         flavour = "mocha",
         transparent_background = false,
@@ -78,7 +91,7 @@ require("lazy").setup({
           treesitter = true,
           dashboard = true,
           which_key = true,
-          indent_blankline = { enabled = true, scope_color = "lavender" },
+          indent_blankline = { enabled = true, scope_color = "mauve" },
           mini = { enabled = true },
           native_lsp = {
             enabled = true,
@@ -137,42 +150,34 @@ require("lazy").setup({
     end,
   },
 
-  -- === LUALINE (con contador de errores) ===
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("lualine").setup({
-        options = {
-          theme = "catppuccin",
-          globalstatus = true,
-          component_separators = { left = "", right = "" },
-          section_separators = { left = "", right = "" },
-        },
-        sections = {
-          lualine_a = { "mode" },
-          lualine_b = {
-            "branch",
-            "diff",
-            {
-              "diagnostics",
-              symbols = {
-                error = " ",
-                warn = " ",
-                info = " ",
-                hint = "󰌶 ",
-              },
-            },
-          },
-          lualine_c = { { "filename", path = 1 } },
-          lualine_x = { "encoding", "fileformat", "filetype" },
-          lualine_y = { "progress" },
-          lualine_z = { "location" },
-        },
-      })
-    end,
-  },
 
+  -- === LUALINE (con contador de errores) ===
+--  {
+--    "nvim-lualine/lualine.nvim",
+--    dependencies = { "nvim-tree/nvim-web-devicons" },
+--    config = function()
+--      require("lualine").setup({
+--        options = {
+--          theme = "catppuccin",
+--          globalstatus = true,
+--          component_separators = { left = "", right = "" },
+--          section_separators = { left = "", right = "" },
+--        },
+--        sections = {
+--          lualine_a = { "mode", },
+--         lualine_b = { "branch", "diff", "diagnostics" },
+--          lualine_c = { { "filename", path = 1 } },
+--          lualine_x = { "encoding", "fileformat", "filetype" },
+--          lualine_y = { "progress" },
+--          lualine_z = { "location" },
+--        },
+--      })
+--    end,
+--  },
+  { 
+    'feline-nvim/feline.nvim',
+    lazy = true,
+  },
   -- === NVIM-TREE ===
   {
     "nvim-tree/nvim-tree.lua",
@@ -209,14 +214,46 @@ require("lazy").setup({
     end,
   },
 
+    {
+    "nvzone/menu",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    keys = {
+      { "<C-t>", function() require("menu").open("default") end, desc = "Open Menu" },
+    },
+    config = function()
+      require("menu").setup({
+        menus = {
+          default = {
+            { name = "Explorer",          icon = "", action = "NvimTreeToggle" },
+            { name = "Find Files",        icon = "", action = "Telescope find_files" },
+            { name = "Recent Files",      icon = "", action = "Telescope oldfiles" },
+            { name = "Live Grep",         icon = "", action = "Telescope live_grep" },
+            { name = "Update Plugins",    icon = "󰚰", action = "Lazy update" },
+            { name = "Quit",              icon = "󰩈", action = "qa" },
+          },
+        },
+      })
+    end,
+  },
   -- === AUTOPAIRS ===
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
+    config = true
+  },
+  {
+    "echasnovski/mini.pairs",
+    event = "InsertEnter",
     config = function()
-      require("nvim-autopairs").setup({
-        check_ts = true,
-        fast_wrap = { map = "<M-e>" },
+      require("mini.pairs").setup({
+        modes = { insert = true, command = true, terminal = false },
+        skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+        skip_ts = { "__default" },
+        skip_unbalanced = true,
+        markdown = true,
       })
     end,
   },
@@ -231,21 +268,22 @@ require("lazy").setup({
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
       "onsails/lspkind.nvim",
+      "rafamadriz/friendly-snippets",
     },
     config = function()
       local cmp = require("cmp")
       local luasnip = require("luasnip")
       local lspkind = require("lspkind")
 
+      require("luasnip.loaders.from_vscode").lazy_load()
+      require("luasnip.loaders.from_lua").load({ paths = vim.fn.stdpath("config") .. "/snippets" })
+
       cmp.setup({
         snippet = { expand = function(args) luasnip.lsp_expand(args.body) end },
-        window = {
-          completion = cmp.config.window.bordered(),
-          documentation = cmp.config.window.bordered(),
-        },
         mapping = cmp.mapping.preset.insert({
           ["<C-Space>"] = cmp.mapping.complete(),
           ["<CR>"] = cmp.mapping.confirm({ select = false }),
@@ -254,6 +292,8 @@ require("lazy").setup({
               cmp.select_next_item()
             elseif luasnip.expand_or_jumpable() then
               luasnip.expand_or_jump()
+            elseif vim.snippet and vim.snippet.active({ direction = 1 }) then
+              vim.snippet.jump(1)
             else
               fallback()
             end
@@ -263,29 +303,66 @@ require("lazy").setup({
               cmp.select_prev_item()
             elseif luasnip.jumpable(-1) then
               luasnip.jump(-1)
+            elseif vim.snippet and vim.snippet.active({ direction = -1 }) then
+              vim.snippet.jump(-1)
             else
               fallback()
             end
           end, { "i", "s" }),
         }),
-        sources = {
+        sources = cmp.config.sources({
           { name = "nvim_lsp", priority = 1000 },
-          { name = "luasnip", priority = 750 },
-          { name = "buffer", priority = 500 },
-          { name = "path", priority = 250 },
-        },
+          { name = "luasnip",  priority = 750 },
+          { name = "path",     priority = 500 },
+          { name = "buffer",   priority = 250 },
+        }),
         formatting = {
           format = lspkind.cmp_format({
             mode = "symbol_text",
             maxwidth = 50,
             ellipsis_char = "...",
-            symbol_map = { Emmet = "Emmet" },
+            symbol_map = { Emmet = "Emmet", Snippet = "Snippet" },
           }),
+        },
+        experimental = { ghost_text = true },
+      })
+
+      cmp.setup.cmdline({ "/", "?" }, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = { { name = "buffer" } },
+      })
+      cmp.setup.cmdline(":", {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
+      })
+    end,
+  }, 
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    config = function()
+      require("noice").setup({
+        lsp = {
+          override = {
+            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+            ["vim.lsp.util.stylize_markdown"] = true,
+            ["cmp.entry.get_documentation"] = true,
+          },
+        },
+        presets = {
+          bottom_search = true,
+          command_palette = true,
+          long_message_to_split = true,
+          inc_rename = true,
+          lsp_doc_border = true,
+        },
+        views = {
+          cmdline_popup = { border = { style = "rounded" } },
         },
       })
     end,
   },
-
   -- === BUFFERLINE ===
   {
     "akinsho/bufferline.nvim",
@@ -303,12 +380,11 @@ require("lazy").setup({
       })
     end,
   },
-
   -- === GITSIGNS ===
   { "lewis6991/gitsigns.nvim", config = true },
 
   -- === TROUBLE ===
-  { "folke/trouble.nvim", config = true },
+  { "folke/trouble.nvim",      config = true },
 
   -- === INDENT-BLANKLINE ===
   {
@@ -324,22 +400,26 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       local hyprcraft = [[
-_____________________                              _____________________
-`-._:  .:'   `:::  .:\           |\__/|           /::  .:'   `:::  .:.-'
-    \      :          \          |:   |          /         :       /    
-     \     ::    .     `-_______/ ::   \_______-'   .      ::   . /      
-      |  :   :: ::'  :   :: ::'  :   :: ::'      :: ::'  :   :: :|       
-      |     ;::         ;::         ;::         ;::         ;::  |       
-      |  .:'   `:::  .:'   `:::  .:'   `:::  .:'   `:::  .:'   `:|       
-      /     :           :           :           :           :    \       
-     /______::_____     ::    .     ::    .     ::   _____._::____\      
-                   `----._:: ::'  :   :: ::'  _.----'                    
-                          `--.       ;::  .--'                           
-                              `-. .:'  .-'                               
-                                 \    / :F_P:                            
-                                  \  /                                   
-                                   \/                                     
-      ]]
+     _                      _______                      _
+  _dMMMb._              .adOOOOOOOOOba.              _,dMMMb_
+ dP'  ~YMMb            dOOOOOOOOOOOOOOOb            aMMP~  `Yb
+ V      ~"Mb          dOOOOOOOOOOOOOOOOOb          dM"~      V
+          `Mb.       dOOOOOOOOOOOOOOOOOOOb       ,dM'
+           `YMb._   |OOOOOOOOOOOOOOOOOOOOO|   _,dMP'
+      __     `YMMM| OP'~"YOOOOOOOOOOOP"~`YO |MMMP'     __
+    ,dMMMb.     ~~' OO     `YOOOOOP'     OO `~~     ,dMMMb.
+ _,dP~  `YMba_      OOb      `OOO'      dOO      _aMMP'  ~Yb._
+
+             `YMMMM\`OOOo     OOO     oOOO'/MMMMP'
+     ,aa.     `~YMMb `OOOb._,dOOOb._,dOOO'dMMP~'       ,aa.
+   ,dMYYMba._         `OOOOOOOOOOOOOOOOO'          _,adMYYMb.
+  ,MP'   `YMMba._      OOOOOOOOOOOOOOOOO       _,adMMP'   `YM.
+  MP'        ~YMMMba._ YOOOOPVVVVVYOOOOP  _,adMMMMP~       `YM
+  YMb           ~YMMMM\`OOOOI`````IOOOOO'/MMMMP~           dMP
+   `Mb.           `YMMMb`OOOI,,,,,IOOOO'dMMMP'           ,dM'
+     `'                  `OObNNNNNdOO'                   `'
+                           `~OOOOO~'   TISSUE 
+    ]]
 
       require("dashboard").setup({
         theme = "doom",
@@ -381,7 +461,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local servers = {
   lua_ls = { settings = { Lua = { diagnostics = { globals = { "vim" } } } } },
   pyright = {},
-  tsserver = {},
+  ts_ls = {}, -- ¡CORREGIDO!
   html = {},
   cssls = {},
   bashls = {},
@@ -404,6 +484,48 @@ local server_map = {
   svelte = "svelte",
 }
 
+local cmp = require("cmp")
+
+cmp.setup({
+    window = {
+        completion = cmp.config.window.bordered({
+            border = "rounded",
+            scrollbar = true,       
+            max_width = 60,
+            max_height = 12,
+        }),
+        documentation = cmp.config.window.bordered({
+            border = "rounded",
+            scrollbar = true,
+            max_height = 15,
+        }),
+    }, 
+    mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-2),
+    ['<C-f>'] = cmp.mapping.scroll_docs(2),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }),
+
+  experimental = {
+    ghost_text = true,
+  },
+
+})
+
+local orig = vim.lsp.util.open_floating_preview
+
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = "rounded"  -- << aquí lo haces redondeado
+
+  opts.max_width = 200
+  opts.max_height = 200
+
+  return orig(contents, syntax, opts, ...)
+end
+
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = vim.tbl_keys(server_map),
   callback = function(args)
@@ -418,25 +540,25 @@ vim.api.nvim_create_autocmd("FileType", {
 local wk = require("which-key")
 
 wk.add({
-  { "<leader>e", ":NvimTreeToggle<CR>", desc = "Explorer" },
+  { "<leader>e",  ":NvimTreeToggle<CR>",             desc = "Explorer" },
 
-  { "<leader>f", group = "Find" },
-  { "<leader>ff", ":Telescope find_files<CR>", desc = "Files" },
-  { "<leader>fg", ":Telescope live_grep<CR>", desc = "Grep" },
-  { "<leader>fb", ":Telescope buffers<CR>", desc = "Buffers" },
-  { "<leader>fo", ":Telescope oldfiles<CR>", desc = "Old Files" },
-  { "<leader>fh", ":Telescope help_tags<CR>", desc = "Help" },
+  { "<leader>f",  group = "Find" },
+  { "<leader>ff", ":Telescope find_files<CR>",       desc = "Files" },
+  { "<leader>fg", ":Telescope live_grep<CR>",        desc = "Grep" },
+  { "<leader>fb", ":Telescope buffers<CR>",          desc = "Buffers" },
+  { "<leader>fo", ":Telescope oldfiles<CR>",         desc = "Old Files" },
+  { "<leader>fh", ":Telescope help_tags<CR>",        desc = "Help" },
 
-  { "<leader>w", ":w<CR>", desc = "Save" },
-  { "<leader>q", ":q<CR>", desc = "Quit" },
+  { "<leader>w",  ":w<CR>",                          desc = "Save" },
+  { "<leader>q",  ":q<CR>",                          desc = "Quit" },
 
-  { "<leader>b", group = "Buffer" },
-  { "<leader>bd", ":bd<CR>", desc = "Delete" },
+  { "<leader>b",  group = "Buffer" },
+  { "<leader>bd", ":bd<CR>",                         desc = "Delete" },
 
-  { "<leader>x", group = "Trouble" },
+  { "<leader>x",  group = "Trouble" },
   { "<leader>xd", ":Trouble diagnostics toggle<CR>", desc = "Diagnostics" },
-  { "<leader>xl", ":Trouble loclist toggle<CR>", desc = "Loclist" },
-  { "<leader>xq", ":Trouble quickfix toggle<CR>", desc = "Quickfix" },
+  { "<leader>xl", ":Trouble loclist toggle<CR>",     desc = "Loclist" },
+  { "<leader>xq", ":Trouble quickfix toggle<CR>",    desc = "Quickfix" },
 })
 
 -- Navegación entre buffers
@@ -449,10 +571,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local buf = args.buf
     wk.add({
-      { "gd", vim.lsp.buf.definition, desc = "Go to Definition", buffer = buf },
-      { "K", vim.lsp.buf.hover, desc = "Hover", buffer = buf },
-      { "<leader>ca", vim.lsp.buf.code_action, desc = "Code Action", buffer = buf },
-      { "<leader>rn", vim.lsp.buf.rename, desc = "Rename", buffer = buf },
+      { "gd",         vim.lsp.buf.definition,  desc = "Go to Definition", buffer = buf },
+      { "K",          vim.lsp.buf.hover,       desc = "Hover",            buffer = buf },
+      { "<leader>ca", vim.lsp.buf.code_action, desc = "Code Action",      buffer = buf },
+      { "<leader>rn", vim.lsp.buf.rename,      desc = "Rename",           buffer = buf },
     }, { buffer = buf })
   end,
 })
@@ -486,11 +608,78 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set("i", ",", function()
       local line = vim.api.nvim_get_current_line()
       local col = vim.api.nvim_win_get_cursor(0)[2]
-      if line:sub(1, col):match("[%w%-%]>$") then
+      if line:sub(1, col):match("[%w%->]$") then
         return "<C-y>,"
       else
         return ","
       end
     end, { expr = true, buffer = true })
   end,
+})
+
+local clrs = require("catppuccin.palettes").get_palette()
+local ctp_feline = require('catppuccin.special.feline')
+local U = require "catppuccin.utils.colors"
+
+ctp_feline.setup({
+    assets = {
+        left_separator = "",
+        right_separator = "",
+        mode_icon = "",
+        dir = "󰉖",
+        file = "󰈙",
+        lsp = {
+            server = "󰅡",
+            error = "",
+            warning = "",
+            info = "",
+            hint = "",
+        },
+        git = {
+            branch = "",
+            added = "",
+            changed = "",
+            removed = "",
+        },
+    },
+    sett = {
+        diffs = clrs.mauve,
+        extras = clrs.overlay1,
+        curr_file = clrs.maroon,
+        curr_dir = clrs.flamingo,
+        show_modified = false, -- show if the file has been modified
+        show_lazy_updates = false -- show the count of updatable plugins from lazy.nvim
+                                  -- need to set checker.enabled = true in lazy.nvim first
+                                  -- the icon is set in ui.icons.plugin in lazy.nvim
+    },
+    mode_colors = {
+        ["n"] = { "NORMAL", clrs.lavender },
+        ["no"] = { "N-PENDING", clrs.lavender },
+        ["i"] = { "INSERT", clrs.green },
+        ["ic"] = { "INSERT", clrs.green },
+        ["t"] = { "TERMINAL", clrs.green },
+        ["v"] = { "VISUAL", clrs.flamingo },
+        ["V"] = { "V-LINE", clrs.flamingo },
+        ["�"] = { "V-BLOCK", clrs.flamingo },
+        ["R"] = { "REPLACE", clrs.maroon },
+        ["Rv"] = { "V-REPLACE", clrs.maroon },
+        ["s"] = { "SELECT", clrs.maroon },
+        ["S"] = { "S-LINE", clrs.maroon },
+        ["�"] = { "S-BLOCK", clrs.maroon },
+        ["c"] = { "COMMAND", clrs.peach },
+        ["cv"] = { "COMMAND", clrs.peach },
+        ["ce"] = { "COMMAND", clrs.peach },
+        ["r"] = { "PROMPT", clrs.teal },
+        ["rm"] = { "MORE", clrs.teal },
+        ["r?"] = { "CONFIRM", clrs.mauve },
+        ["!"] = { "SHELL", clrs.green },
+    },
+    view = {
+        lsp = {
+            progress = true, -- if true the status bar will display an lsp progress indicator
+            name = false, -- if true the status bar will display the lsp servers name, otherwise it will display the text "Lsp"
+            exclude_lsp_names = {}, -- lsp server names that should not be displayed when name is set to true
+            separator = "|", -- the separator used when there are multiple lsp servers
+        },
+    }
 })
