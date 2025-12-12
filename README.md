@@ -23,90 +23,13 @@
   </a>
 </p>
 
-# HyprCraft - Masterful code development environment
+<h1 align="center">Hyprcraft – Unmaintained</h1>
 
-A workspace where you can develop the best code of your life, with configurations tailored for a visually pleasing experience. Featuring Catppuccin Mocha colors.
-
-> [!NOTE]
-> Repository in development; suggestions or issues can be discussed on Discord.
->
-> The colors used in this repository and configurations are those of Catppuccin Mocha. The installation script will be available soon.
-
-## Whoami hyprcraft
-
-The colors used in this repository and configurations are those of Catppuccin Mocha. The installation script will be available soon.
-The packages used are the following:
-
-- **OS**: Arch Linux
-- **Window Manager**: Hyprland
-- **Status bar**: Waybar
-- **Shell**: Zsh
-- **Notification Manager**: Dunst
-- **Audio manager**: pipewire + wirepumbler
-- **Colors**: Catppuccin mocha
-- **App Launcher**: Rofi
-- **Wallpaper**: Hyprpaper
-- **Screenshot**: Hyprshot
-- **Manage wallpaper**: Hyprpaper
-- **Logout**: Wlogout
-- **Audio Visualizer**: Cava
-
->  [!NOTE]
->
-> The packages used are the following: In development <a href="https://hyprcraft.netlify.app/">This</a>
-
-## Keybinds 
-
-|  Keys |  Action |
-| :------------------------------ | :---------------------------- |
-| `⎈ SUPER` + `D` | Open Terminal |
-| `⎈ SUPER` + `Q` | Kill Focused Window |
-| `⎈ SUPER` + `M` | Exit Hyprland Session |
-| `⎈ SUPER` + `L` | Lock Screen |
-| `⎈ SUPER` + `⇧ Shift` + `F` | Toggle Fullscreen |
-
-
-> [!NOTE]
-> You can find the complete keybind configuration on the HyprCraft website.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
+<p>
+This project is no longer maintained. Hyprcraft will be discontinued and replaced by a new, actively developed environment called <b>BlackNode</b>.
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>
+All future updates, configurations, and support will be provided in the BlackNode repository:<br>
+<a href="https://github.com/zhaleff/BlackNode">github.com/zhaleff/BlackNode</a>
+</p>
