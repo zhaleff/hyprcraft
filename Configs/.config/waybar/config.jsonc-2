@@ -1,22 +1,10 @@
-// Copyright (c) 2025 Zhaleff && HollowSec. All Rights Reserved.
-// LICENCE: MIT 
-// 
 //--- ZepharDev Nvim
-//
-//
-// Hi :D
-//
-// Config waybar, style num 3, waybar for chill 
-// 
-// 
-
-
 {
   "layer": "top",
   "position": "top",
   "height": 30,
-  "margin-left": 10,
-  "margin-right": 10,
+  "margin-left": 50,
+  "margin-right": 50,
   "margin-top": 5,
   "margin-bottom": 0,
   "spacing": 15,
@@ -25,31 +13,28 @@
   // Choose the order of the modules
 
   "modules-left": [ 
+    "group/hollow-left-1",
     "group/hollow-left-2",
-    // "group/hollow-left-2",
-    "group/hollow-left-4",
-    "group/hollow-left-5"
+    "group/hollow-left-3"
   ],
   "modules-center": [
+    "group/hollow-center-1"
   ],
   "modules-right": [
     "group/hollow-right-5",
-    "group/hollow-right-4",
-    "group/hollow-right-1",
     "group/hollow-right-3"
   ],
   "group/hollow-center-1": {
     "orientation": "horizontal",
     "modules": [
+    "backlight",
+    "clock",
+    "battery"
     ],
   },
   "group/hollow-left-4": {
     "orientation": "horizontal",
     "modules": [
-      "mpris",
-      "custom/previous",
-      "custom/pause",
-      "custom/next",
     ],
   },
 
@@ -64,9 +49,6 @@
   "group/hollow-right-1": {
     "orientation": "horizontal",
     "modules": [
-      "cpu",
-      "temperature", 
-      "memory"
     ],
   },
   "group/hollow-left-2": {
@@ -84,30 +66,24 @@
   "group/hollow-left-3": {
     "orientation": "horizontal",
     "modules": [
-      "custom/uptime",
+      "network#speed",
     ],
   },
   "group/hollow-right-4": {
     "orientation": "horizontal",
     "modules": [
-      "idle_inhibitor",
-      "clock",
-    ],
-  },
-  "group/hollow-left-5": {
-    "orientation": "horizontal",
-    "modules": [
-      "backlight",
-      "wireplumber",
-      "network",
-      "custom/power",
-      "battery",
+      "mpris",
+      "custom/previous",
+      "custom/pause",
+      "custom/next",
     ],
   },
   "group/hollow-right-5": {
     "orientation": "horizontal",
     "modules": [
-       "hyprland/window"
+      "network",
+      "idle_inhibitor",
+      "custom/power",
     ],
   },
   // Modules configuration
@@ -149,10 +125,10 @@
 
 
   "clock": {
-    "format": "{:%H:%M}",
+    "format": " {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}",
-    },
+  },
     "custom/target": {
         "format": "󰓾 {}",
 
@@ -190,7 +166,9 @@
   },
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{icon}",
+    "format": "{icon} {percent:>2}%",
+    "tooltip": "{percent:>2}%",
+    "format-alt": "{percent:>2}%",
     "format-icons": [ "", "", "", "", "", "", "", "", ""],
   },
 
@@ -239,7 +217,7 @@
     "idle_inhibitor": {
        "format": "{icon}",
       "format-icons": {
-       "activated": "󰅶",
+       "activated": "󰅶 ",
        "deactivated": "󰛊",
      },
     },
@@ -253,8 +231,7 @@
         "on-click": "notify-send 'Usuario' '$(whoami)@$(hostname)'"
   },
   "wireplumber": {
-    "format": "{icon}",
-    "tooltip-format": "{icon}{volume:>3}%",
+    "format": "{icon} {volume:>3}%",
     "format-muted": "󰖁 {volume:>3}%",
     "format-bluetooth": "{icon} {volume:>2}% 󰂯", //{format_source}",
     "format-bluetooth-muted": "󰖁 {icon} 󰂯", //{format_source}",
@@ -279,48 +256,30 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}",
+    "format": "{icon} {capacity}%",
     "format-full": "{icon}",
     "format-plugged": " {capacity}% <span font='Font Awesome 5 Free'>\uf0e7</span> ",
     "format-alt": "{icon} {capacity}%",
     "tooltip-format": "{capacity}%, about {time} left",
     "format-icons": [" ", " ", " ", " "]
   },
-  "custom/next": {
-    "format": "󰙡 ",
-    "on-click": "playerctl --player=spotify next && playerctl --player=youtube-music next",
-    "tooltip": false,
-  },
-  "custom/pause": {
-    "format": "{icon}",
-//    "exec": "playerctl -l 2>/dev/null | head -n 1",
-    "on-click": "playerctl --player=spotify play-pause",
-    "tooltip": false,
-    "format-icons": [ "", "" ],
-  },
-  "custom/previous": {
-    "format": "󰙣",
-    "on-click": "playerctl --player=spotify previous && playerctl --player=youtube-music previous",
-    "tooltip": false,
-  },
-   "mpris": {
-     "format": "{player_icon} {title} - {artist} ",
-     "format-paused": "{status_icon} {title} - {artist}",
 
-     "player-icons": {
-       "default": "<span foreground='#cba6f7'>󰝚 </span>",
-       "spotify": "<span foreground='#a6e3a1'>󰓇 </span>",
-       "firefox": "<span foreground='#f38ba8'>󰗃 </span>"
-     },
-     "status-icons": {
-       "paused": "<span color='#b4befe'>\u200A\u200A󰏤\u2009\u2009</span>"
-     },
-
-     "tooltip-format": "Playing: {title} - {artist}",
-     "tooltip-format-paused": "Paused: {title} - {artist}",
-     "min-length": 5,
-     "max-length": 18,
-   },
-
+  "network#speed": {
+    "interval": 1,
+    "format": "{ifname}%%",
+    "format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+    "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "{ipaddr}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 16,
+    "min-length": 14,
+  },
 } 
+
+
+
 

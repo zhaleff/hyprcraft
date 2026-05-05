@@ -65,11 +65,11 @@ require("lazy").setup({
       })
 
       ctp_feline.setup({
-          view = {
-              lsp = {
-                  name = true
-              }
+        view = {
+          lsp = {
+            name = true
           }
+        }
       })
       require("catppuccin").setup({
         flavour = "mocha",
@@ -152,29 +152,29 @@ require("lazy").setup({
 
 
   -- === LUALINE (con contador de errores) ===
---  {
---    "nvim-lualine/lualine.nvim",
---    dependencies = { "nvim-tree/nvim-web-devicons" },
---    config = function()
---      require("lualine").setup({
---        options = {
---          theme = "catppuccin",
---          globalstatus = true,
---          component_separators = { left = "", right = "" },
---          section_separators = { left = "", right = "" },
---        },
---        sections = {
---          lualine_a = { "mode", },
---         lualine_b = { "branch", "diff", "diagnostics" },
---          lualine_c = { { "filename", path = 1 } },
---          lualine_x = { "encoding", "fileformat", "filetype" },
---          lualine_y = { "progress" },
---          lualine_z = { "location" },
---        },
---      })
---    end,
---  },
-  { 
+  --  {
+  --    "nvim-lualine/lualine.nvim",
+  --    dependencies = { "nvim-tree/nvim-web-devicons" },
+  --    config = function()
+  --      require("lualine").setup({
+  --        options = {
+  --          theme = "catppuccin",
+  --          globalstatus = true,
+  --          component_separators = { left = "", right = "" },
+  --          section_separators = { left = "", right = "" },
+  --        },
+  --        sections = {
+  --          lualine_a = { "mode", },
+  --         lualine_b = { "branch", "diff", "diagnostics" },
+  --          lualine_c = { { "filename", path = 1 } },
+  --          lualine_x = { "encoding", "fileformat", "filetype" },
+  --          lualine_y = { "progress" },
+  --          lualine_z = { "location" },
+  --        },
+  --      })
+  --    end,
+  --  },
+  {
     'feline-nvim/feline.nvim',
     lazy = true,
   },
@@ -213,8 +213,7 @@ require("lazy").setup({
       })
     end,
   },
-
-    {
+  {
     "nvzone/menu",
     dependencies = {
       "MunifTanjim/nui.nvim",
@@ -227,12 +226,12 @@ require("lazy").setup({
       require("menu").setup({
         menus = {
           default = {
-            { name = "Explorer",          icon = "", action = "NvimTreeToggle" },
-            { name = "Find Files",        icon = "", action = "Telescope find_files" },
-            { name = "Recent Files",      icon = "", action = "Telescope oldfiles" },
-            { name = "Live Grep",         icon = "", action = "Telescope live_grep" },
-            { name = "Update Plugins",    icon = "󰚰", action = "Lazy update" },
-            { name = "Quit",              icon = "󰩈", action = "qa" },
+            { name = "Explorer", icon = "", action = "NvimTreeToggle" },
+            { name = "Find Files", icon = "", action = "Telescope find_files" },
+            { name = "Recent Files", icon = "", action = "Telescope oldfiles" },
+            { name = "Live Grep", icon = "", action = "Telescope live_grep" },
+            { name = "Update Plugins", icon = "󰚰", action = "Lazy update" },
+            { name = "Quit", icon = "󰩈", action = "qa" },
           },
         },
       })
@@ -336,7 +335,7 @@ require("lazy").setup({
         sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
       })
     end,
-  }, 
+  },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
@@ -418,7 +417,7 @@ require("lazy").setup({
   YMb           ~YMMMM\`OOOOI`````IOOOOO'/MMMMP~           dMP
    `Mb.           `YMMMb`OOOI,,,,,IOOOO'dMMMP'           ,dM'
      `'                  `OObNNNNNdOO'                   `'
-                           `~OOOOO~'   TISSUE 
+                           `~OOOOO~'   TISSUE
     ]]
 
       require("dashboard").setup({
@@ -487,20 +486,20 @@ local server_map = {
 local cmp = require("cmp")
 
 cmp.setup({
-    window = {
-        completion = cmp.config.window.bordered({
-            border = "rounded",
-            scrollbar = true,       
-            max_width = 60,
-            max_height = 12,
-        }),
-        documentation = cmp.config.window.bordered({
-            border = "rounded",
-            scrollbar = true,
-            max_height = 15,
-        }),
-    }, 
-    mapping = cmp.mapping.preset.insert({
+  window = {
+    completion = cmp.config.window.bordered({
+      border = "rounded",
+      scrollbar = true,
+      max_width = 60,
+      max_height = 12,
+    }),
+    documentation = cmp.config.window.bordered({
+      border = "rounded",
+      scrollbar = true,
+      max_height = 15,
+    }),
+  },
+  mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-2),
     ['<C-f>'] = cmp.mapping.scroll_docs(2),
     ['<C-Space>'] = cmp.mapping.complete(),
@@ -517,14 +516,13 @@ local orig = vim.lsp.util.open_floating_preview
 
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   opts = opts or {}
-  opts.border = "rounded"  -- << aquí lo haces redondeado
+  opts.border = "rounded" -- << aquí lo haces redondeado
 
   opts.max_width = 200
   opts.max_height = 200
 
   return orig(contents, syntax, opts, ...)
 end
-
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = vim.tbl_keys(server_map),
@@ -622,64 +620,64 @@ local ctp_feline = require('catppuccin.special.feline')
 local U = require "catppuccin.utils.colors"
 
 ctp_feline.setup({
-    assets = {
-        left_separator = "",
-        right_separator = "",
-        mode_icon = "",
-        dir = "󰉖",
-        file = "󰈙",
-        lsp = {
-            server = "󰅡",
-            error = "",
-            warning = "",
-            info = "",
-            hint = "",
-        },
-        git = {
-            branch = "",
-            added = "",
-            changed = "",
-            removed = "",
-        },
+  assets = {
+    left_separator = "",
+    right_separator = "",
+    mode_icon = "",
+    dir = "󰉖",
+    file = "󰈙",
+    lsp = {
+      server = "󰅡",
+      error = "",
+      warning = "",
+      info = "",
+      hint = "",
     },
-    sett = {
-        diffs = clrs.mauve,
-        extras = clrs.overlay1,
-        curr_file = clrs.maroon,
-        curr_dir = clrs.flamingo,
-        show_modified = false, -- show if the file has been modified
-        show_lazy_updates = false -- show the count of updatable plugins from lazy.nvim
-                                  -- need to set checker.enabled = true in lazy.nvim first
-                                  -- the icon is set in ui.icons.plugin in lazy.nvim
+    git = {
+      branch = "",
+      added = "",
+      changed = "",
+      removed = "",
     },
-    mode_colors = {
-        ["n"] = { "NORMAL", clrs.lavender },
-        ["no"] = { "N-PENDING", clrs.lavender },
-        ["i"] = { "INSERT", clrs.green },
-        ["ic"] = { "INSERT", clrs.green },
-        ["t"] = { "TERMINAL", clrs.green },
-        ["v"] = { "VISUAL", clrs.flamingo },
-        ["V"] = { "V-LINE", clrs.flamingo },
-        ["�"] = { "V-BLOCK", clrs.flamingo },
-        ["R"] = { "REPLACE", clrs.maroon },
-        ["Rv"] = { "V-REPLACE", clrs.maroon },
-        ["s"] = { "SELECT", clrs.maroon },
-        ["S"] = { "S-LINE", clrs.maroon },
-        ["�"] = { "S-BLOCK", clrs.maroon },
-        ["c"] = { "COMMAND", clrs.peach },
-        ["cv"] = { "COMMAND", clrs.peach },
-        ["ce"] = { "COMMAND", clrs.peach },
-        ["r"] = { "PROMPT", clrs.teal },
-        ["rm"] = { "MORE", clrs.teal },
-        ["r?"] = { "CONFIRM", clrs.mauve },
-        ["!"] = { "SHELL", clrs.green },
+  },
+  sett = {
+    diffs = clrs.mauve,
+    extras = clrs.overlay1,
+    curr_file = clrs.maroon,
+    curr_dir = clrs.flamingo,
+    show_modified = false,    -- show if the file has been modified
+    show_lazy_updates = false -- show the count of updatable plugins from lazy.nvim
+    -- need to set checker.enabled = true in lazy.nvim first
+    -- the icon is set in ui.icons.plugin in lazy.nvim
+  },
+  mode_colors = {
+    ["n"] = { "NORMAL", clrs.lavender },
+    ["no"] = { "N-PENDING", clrs.lavender },
+    ["i"] = { "INSERT", clrs.green },
+    ["ic"] = { "INSERT", clrs.green },
+    ["t"] = { "TERMINAL", clrs.green },
+    ["v"] = { "VISUAL", clrs.flamingo },
+    ["V"] = { "V-LINE", clrs.flamingo },
+    ["�"] = { "V-BLOCK", clrs.flamingo },
+    ["R"] = { "REPLACE", clrs.maroon },
+    ["Rv"] = { "V-REPLACE", clrs.maroon },
+    ["s"] = { "SELECT", clrs.maroon },
+    ["S"] = { "S-LINE", clrs.maroon },
+    ["�"] = { "S-BLOCK", clrs.maroon },
+    ["c"] = { "COMMAND", clrs.peach },
+    ["cv"] = { "COMMAND", clrs.peach },
+    ["ce"] = { "COMMAND", clrs.peach },
+    ["r"] = { "PROMPT", clrs.teal },
+    ["rm"] = { "MORE", clrs.teal },
+    ["r?"] = { "CONFIRM", clrs.mauve },
+    ["!"] = { "SHELL", clrs.green },
+  },
+  view = {
+    lsp = {
+      progress = true,        -- if true the status bar will display an lsp progress indicator
+      name = false,           -- if true the status bar will display the lsp servers name, otherwise it will display the text "Lsp"
+      exclude_lsp_names = {}, -- lsp server names that should not be displayed when name is set to true
+      separator = "|",        -- the separator used when there are multiple lsp servers
     },
-    view = {
-        lsp = {
-            progress = true, -- if true the status bar will display an lsp progress indicator
-            name = false, -- if true the status bar will display the lsp servers name, otherwise it will display the text "Lsp"
-            exclude_lsp_names = {}, -- lsp server names that should not be displayed when name is set to true
-            separator = "|", -- the separator used when there are multiple lsp servers
-        },
-    }
+  }
 })
